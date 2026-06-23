@@ -1,0 +1,297 @@
+{
+  "BRCA": [
+    {
+      "pathway": "REACTOME_FORMATION_OF_THE_CORNIFIED_ENVELOPE",
+      "n_overlap": 9,
+      "n_pathway": 129,
+      "p_value": 0.00026139471774928576
+    },
+    {
+      "pathway": "REACTOME_DIFFERENTIATION_OF_KERATINOCYTES_IN_INTERFOLLICULAR_EPIDERMIS_IN_MAMMALIAN_SKIN",
+      "n_overlap": 5,
+      "n_pathway": 40,
+      "p_value": 0.00047142674808929054
+    },
+    {
+      "pathway": "KEGG_PPAR_SIGNALING_PATHWAY",
+      "n_overlap": 5,
+      "n_pathway": 69,
+      "p_value": 0.005514506820882062
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 72,
+      "p_value": 0.006603052955395544
+    },
+    {
+      "pathway": "REACTOME_KERATINIZATION",
+      "n_overlap": 9,
+      "n_pathway": 217,
+      "p_value": 0.00954250403654864
+    }
+  ],
+  "READ": [
+    {
+      "pathway": "REACTOME_ANTIMICROBIAL_PEPTIDES",
+      "n_overlap": 6,
+      "n_pathway": 98,
+      "p_value": 0.005514442715647036
+    },
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 70,
+      "p_value": 0.005862055262998676
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 72,
+      "p_value": 0.006603052955395544
+    },
+    {
+      "pathway": "REACTOME_STIMULI_SENSING_CHANNELS",
+      "n_overlap": 5,
+      "n_pathway": 106,
+      "p_value": 0.030844258296316436
+    },
+    {
+      "pathway": "REACTOME_DRUG_ADME",
+      "n_overlap": 5,
+      "n_pathway": 109,
+      "p_value": 0.034217414773487095
+    }
+  ],
+  "THYM": [
+    {
+      "pathway": "REACTOME_DIFFERENTIATION_OF_KERATINOCYTES_IN_INTERFOLLICULAR_EPIDERMIS_IN_MAMMALIAN_SKIN",
+      "n_overlap": 5,
+      "n_pathway": 40,
+      "p_value": 0.00047142674808929054
+    }
+  ],
+  "GBM": [],
+  "LAML": [
+    {
+      "pathway": "REACTOME_ANTIMICROBIAL_PEPTIDES",
+      "n_overlap": 7,
+      "n_pathway": 98,
+      "p_value": 0.0011272859700887405
+    }
+  ],
+  "PAAD": [
+    {
+      "pathway": "REACTOME_DIGESTION_OF_DIETARY_LIPID",
+      "n_overlap": 5,
+      "n_pathway": 7,
+      "p_value": 2.3234239132284823e-08
+    },
+    {
+      "pathway": "REACTOME_DIGESTION",
+      "n_overlap": 7,
+      "n_pathway": 23,
+      "p_value": 5.5145573507590306e-08
+    },
+    {
+      "pathway": "REACTOME_DIGESTION_AND_ABSORPTION",
+      "n_overlap": 7,
+      "n_pathway": 28,
+      "p_value": 2.488457230042275e-07
+    },
+    {
+      "pathway": "REACTOME_PEPTIDE_HORMONE_METABOLISM",
+      "n_overlap": 5,
+      "n_pathway": 88,
+      "p_value": 0.015029993466079956
+    },
+    {
+      "pathway": "REACTOME_FORMATION_OF_THE_CORNIFIED_ENVELOPE",
+      "n_overlap": 6,
+      "n_pathway": 129,
+      "p_value": 0.019797304587565578
+    }
+  ],
+  "BLCA": [
+    {
+      "pathway": "REACTOME_FORMATION_OF_THE_CORNIFIED_ENVELOPE",
+      "n_overlap": 16,
+      "n_pathway": 129,
+      "p_value": 2.2307284299638106e-10
+    },
+    {
+      "pathway": "REACTOME_DIFFERENTIATION_OF_KERATINOCYTES_IN_INTERFOLLICULAR_EPIDERMIS_IN_MAMMALIAN_SKIN",
+      "n_overlap": 8,
+      "n_pathway": 40,
+      "p_value": 2.1442701585007037e-07
+    },
+    {
+      "pathway": "REACTOME_KERATINIZATION",
+      "n_overlap": 16,
+      "n_pathway": 217,
+      "p_value": 4.2002639480084745e-07
+    },
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 70,
+      "p_value": 0.005862055262998676
+    },
+    {
+      "pathway": "REACTOME_BIOLOGICAL_OXIDATIONS",
+      "n_overlap": 8,
+      "n_pathway": 220,
+      "p_value": 0.0290076741692853
+    },
+    {
+      "pathway": "REACTOME_PHASE_II_CONJUGATION_OF_COMPOUNDS",
+      "n_overlap": 5,
+      "n_pathway": 109,
+      "p_value": 0.034217414773487095
+    },
+    {
+      "pathway": "REACTOME_DRUG_ADME",
+      "n_overlap": 5,
+      "n_pathway": 109,
+      "p_value": 0.034217414773487095
+    }
+  ],
+  "LUSC": [
+    {
+      "pathway": "REACTOME_FORMATION_OF_THE_CORNIFIED_ENVELOPE",
+      "n_overlap": 16,
+      "n_pathway": 129,
+      "p_value": 2.2307284299638106e-10
+    },
+    {
+      "pathway": "REACTOME_DEFECTIVE_CSF2RB_CAUSES_SMDP5",
+      "n_overlap": 6,
+      "n_pathway": 8,
+      "p_value": 4.883127197949252e-10
+    },
+    {
+      "pathway": "REACTOME_DISEASES_ASSOCIATED_WITH_SURFACTANT_METABOLISM",
+      "n_overlap": 6,
+      "n_pathway": 10,
+      "p_value": 3.5650496590230728e-09
+    },
+    {
+      "pathway": "REACTOME_SURFACTANT_METABOLISM",
+      "n_overlap": 8,
+      "n_pathway": 30,
+      "p_value": 1.8708716693161846e-08
+    },
+    {
+      "pathway": "REACTOME_DIFFERENTIATION_OF_KERATINOCYTES_IN_INTERFOLLICULAR_EPIDERMIS_IN_MAMMALIAN_SKIN",
+      "n_overlap": 8,
+      "n_pathway": 40,
+      "p_value": 2.1442701585007037e-07
+    },
+    {
+      "pathway": "REACTOME_KERATINIZATION",
+      "n_overlap": 16,
+      "n_pathway": 217,
+      "p_value": 4.2002639480084745e-07
+    },
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 7,
+      "n_pathway": 70,
+      "p_value": 0.00014256738820040457
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 7,
+      "n_pathway": 72,
+      "p_value": 0.00017051775761684325
+    },
+    {
+      "pathway": "REACTOME_BIOLOGICAL_OXIDATIONS",
+      "n_overlap": 9,
+      "n_pathway": 220,
+      "p_value": 0.010390189853320325
+    },
+    {
+      "pathway": "REACTOME_PHASE_II_CONJUGATION_OF_COMPOUNDS",
+      "n_overlap": 5,
+      "n_pathway": 109,
+      "p_value": 0.034217414773487095
+    }
+  ],
+  "OV": [
+    {
+      "pathway": "REACTOME_COLLAGEN_DEGRADATION",
+      "n_overlap": 5,
+      "n_pathway": 64,
+      "p_value": 0.003992502150855474
+    },
+    {
+      "pathway": "REACTOME_GASTRULATION",
+      "n_overlap": 6,
+      "n_pathway": 129,
+      "p_value": 0.019797304587565578
+    }
+  ],
+  "LIHC": [
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 10,
+      "n_pathway": 72,
+      "p_value": 2.2872281832874726e-07
+    },
+    {
+      "pathway": "REACTOME_XENOBIOTICS",
+      "n_overlap": 6,
+      "n_pathway": 23,
+      "p_value": 1.4388413665777184e-06
+    },
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 9,
+      "n_pathway": 70,
+      "p_value": 1.8604461147094695e-06
+    },
+    {
+      "pathway": "REACTOME_BIOLOGICAL_OXIDATIONS",
+      "n_overlap": 14,
+      "n_pathway": 220,
+      "p_value": 1.337050781284852e-05
+    },
+    {
+      "pathway": "REACTOME_PHASE_I_FUNCTIONALIZATION_OF_COMPOUNDS",
+      "n_overlap": 9,
+      "n_pathway": 104,
+      "p_value": 4.934057647745256e-05
+    },
+    {
+      "pathway": "REACTOME_DRUG_ADME",
+      "n_overlap": 9,
+      "n_pathway": 109,
+      "p_value": 7.149999922427678e-05
+    },
+    {
+      "pathway": "REACTOME_CYTOCHROME_P450_ARRANGED_BY_SUBSTRATE_TYPE",
+      "n_overlap": 7,
+      "n_pathway": 64,
+      "p_value": 8.012827545196704e-05
+    },
+    {
+      "pathway": "KEGG_RETINOL_METABOLISM",
+      "n_overlap": 7,
+      "n_pathway": 64,
+      "p_value": 8.012827545196704e-05
+    },
+    {
+      "pathway": "KEGG_LINOLEIC_ACID_METABOLISM",
+      "n_overlap": 5,
+      "n_pathway": 29,
+      "p_value": 9.830129113021896e-05
+    },
+    {
+      "pathway": "REACTOME_ASPIRIN_ADME",
+      "n_overlap": 5,
+      "n_pathway": 44,
+      "p_value": 0.0007383390615030825
+    }
+  ]
+}

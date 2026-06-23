@@ -1,0 +1,382 @@
+{
+  "BRCA": [
+    {
+      "pathway": "KEGG_PPAR_SIGNALING_PATHWAY",
+      "n_overlap": 5,
+      "n_pathway": 69,
+      "p_value": 0.005514506820882062,
+      "genes": [
+        "ADIPOQ",
+        "FABP4",
+        "FABP7",
+        "HMGCS2",
+        "PLIN1"
+      ]
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 72,
+      "p_value": 0.006603052955395544,
+      "genes": [
+        "ADH1B",
+        "CYP2A6",
+        "GSTM1",
+        "GSTT1",
+        "UGT2B11"
+      ]
+    },
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 4,
+      "n_pathway": 70,
+      "p_value": 0.028378103956184744,
+      "genes": [
+        "ADH1B",
+        "GSTM1",
+        "GSTT1",
+        "UGT2B11"
+      ]
+    }
+  ],
+  "READ": [
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 70,
+      "p_value": 0.005862055262998676,
+      "genes": [
+        "ADH1B",
+        "ADH1C",
+        "GSTM1",
+        "GSTT1",
+        "UGT2B15"
+      ]
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 72,
+      "p_value": 0.006603052955395544,
+      "genes": [
+        "ADH1B",
+        "ADH1C",
+        "GSTM1",
+        "GSTT1",
+        "UGT2B15"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_REFERENCE_WNT_SIGNALING_MODULATION_WNT_INHIBITOR",
+      "n_overlap": 3,
+      "n_pathway": 28,
+      "p_value": 0.010738161868018006,
+      "genes": [
+        "NOTUM",
+        "SFRP2",
+        "WIF1"
+      ]
+    }
+  ],
+  "THYM": [],
+  "GBM": [],
+  "LAML": [
+    {
+      "pathway": "KEGG_MEDICUS_VARIANT_MLL_ENL_FUSION_TO_TRANSCRIPTIONAL_ACTIVATION",
+      "n_overlap": 3,
+      "n_pathway": 13,
+      "p_value": 0.0011223342621588177,
+      "genes": [
+        "HOXA10",
+        "HOXA9",
+        "MEIS1"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_VARIANT_MLL_AF4_FUSION_TO_TRANSCRIPTIONAL_ACTIVATION",
+      "n_overlap": 3,
+      "n_pathway": 26,
+      "p_value": 0.008728338061672721,
+      "genes": [
+        "HOXA10",
+        "HOXA9",
+        "PROM1"
+      ]
+    }
+  ],
+  "PAAD": [
+    {
+      "pathway": "KEGG_GLYCEROLIPID_METABOLISM",
+      "n_overlap": 4,
+      "n_pathway": 49,
+      "p_value": 0.008527443048137547,
+      "genes": [
+        "CEL",
+        "PNLIP",
+        "PNLIPRP1",
+        "PNLIPRP2"
+      ]
+    }
+  ],
+  "BLCA": [
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 5,
+      "n_pathway": 70,
+      "p_value": 0.005862055262998676,
+      "genes": [
+        "CYP1A1",
+        "GSTA1",
+        "GSTM1",
+        "UGT1A10",
+        "UGT1A8"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_ENV_FACTOR_TCDD_TO_AHR_SIGNALING_PATHWAY",
+      "n_overlap": 3,
+      "n_pathway": 23,
+      "p_value": 0.0061626077046918895,
+      "genes": [
+        "CYP1A1",
+        "GSTA1",
+        "GSTM1"
+      ]
+    },
+    {
+      "pathway": "KEGG_PORPHYRIN_AND_CHLOROPHYLL_METABOLISM",
+      "n_overlap": 3,
+      "n_pathway": 41,
+      "p_value": 0.029944458617342955,
+      "genes": [
+        "CP",
+        "UGT1A10",
+        "UGT1A8"
+      ]
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 4,
+      "n_pathway": 72,
+      "p_value": 0.031059374341624413,
+      "genes": [
+        "GSTA1",
+        "GSTM1",
+        "UGT1A10",
+        "UGT1A8"
+      ]
+    },
+    {
+      "pathway": "KEGG_GLUTATHIONE_METABOLISM",
+      "n_overlap": 3,
+      "n_pathway": 50,
+      "p_value": 0.04952472058165052,
+      "genes": [
+        "GPX2",
+        "GSTA1",
+        "GSTM1"
+      ]
+    }
+  ],
+  "LUSC": [
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 7,
+      "n_pathway": 70,
+      "p_value": 0.00014256738820040457,
+      "genes": [
+        "ADH1C",
+        "ADH7",
+        "GSTA1",
+        "GSTM1",
+        "GSTT1",
+        "UGT1A10",
+        "UGT1A7"
+      ]
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 7,
+      "n_pathway": 72,
+      "p_value": 0.00017051775761684325,
+      "genes": [
+        "ADH1C",
+        "ADH7",
+        "GSTA1",
+        "GSTM1",
+        "GSTT1",
+        "UGT1A10",
+        "UGT1A7"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_ENV_FACTOR_DCE_TO_DNA_ADDUCTS",
+      "n_overlap": 3,
+      "n_pathway": 19,
+      "p_value": 0.0035375931709121546,
+      "genes": [
+        "GSTA1",
+        "GSTM1",
+        "GSTT1"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_ENV_FACTOR_TCDD_TO_AHR_SIGNALING_PATHWAY",
+      "n_overlap": 3,
+      "n_pathway": 23,
+      "p_value": 0.0061626077046918895,
+      "genes": [
+        "GSTA1",
+        "GSTM1",
+        "GSTT1"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_REFERENCE_KEAP1_NRF2_SIGNALING_PATHWAY",
+      "n_overlap": 3,
+      "n_pathway": 24,
+      "p_value": 0.006959157040779492,
+      "genes": [
+        "GSTA1",
+        "GSTM1",
+        "GSTT1"
+      ]
+    },
+    {
+      "pathway": "KEGG_GLUTATHIONE_METABOLISM",
+      "n_overlap": 4,
+      "n_pathway": 50,
+      "p_value": 0.009153157667634403,
+      "genes": [
+        "GPX2",
+        "GSTA1",
+        "GSTM1",
+        "GSTT1"
+      ]
+    },
+    {
+      "pathway": "KEGG_RETINOL_METABOLISM",
+      "n_overlap": 4,
+      "n_pathway": 64,
+      "p_value": 0.021191347317268,
+      "genes": [
+        "ADH1C",
+        "ADH7",
+        "UGT1A10",
+        "UGT1A7"
+      ]
+    }
+  ],
+  "OV": [],
+  "LIHC": [
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_CYTOCHROME_P450",
+      "n_overlap": 10,
+      "n_pathway": 72,
+      "p_value": 2.2872281832874726e-07,
+      "genes": [
+        "ADH4",
+        "ALDH3A1",
+        "CYP1A2",
+        "CYP2A6",
+        "CYP2A7",
+        "CYP2E1",
+        "CYP3A4",
+        "GSTM1",
+        "GSTT1",
+        "UGT1A4"
+      ]
+    },
+    {
+      "pathway": "KEGG_METABOLISM_OF_XENOBIOTICS_BY_CYTOCHROME_P450",
+      "n_overlap": 9,
+      "n_pathway": 70,
+      "p_value": 1.8604461147094695e-06,
+      "genes": [
+        "ADH4",
+        "ALDH3A1",
+        "CYP1A1",
+        "CYP1A2",
+        "CYP2E1",
+        "CYP3A4",
+        "GSTM1",
+        "GSTT1",
+        "UGT1A4"
+      ]
+    },
+    {
+      "pathway": "KEGG_RETINOL_METABOLISM",
+      "n_overlap": 7,
+      "n_pathway": 64,
+      "p_value": 8.012827545196704e-05,
+      "genes": [
+        "ADH4",
+        "CYP1A1",
+        "CYP1A2",
+        "CYP2A6",
+        "CYP2A7",
+        "CYP3A4",
+        "UGT1A4"
+      ]
+    },
+    {
+      "pathway": "KEGG_LINOLEIC_ACID_METABOLISM",
+      "n_overlap": 5,
+      "n_pathway": 29,
+      "p_value": 9.830129113021896e-05,
+      "genes": [
+        "AKR1B10",
+        "CYP1A2",
+        "CYP2E1",
+        "CYP3A4",
+        "PLA2G2A"
+      ]
+    },
+    {
+      "pathway": "KEGG_MEDICUS_ENV_FACTOR_TCDD_TO_AHR_SIGNALING_PATHWAY",
+      "n_overlap": 3,
+      "n_pathway": 23,
+      "p_value": 0.0061626077046918895,
+      "genes": [
+        "CYP1A1",
+        "GSTM1",
+        "GSTT1"
+      ]
+    },
+    {
+      "pathway": "KEGG_DRUG_METABOLISM_OTHER_ENZYMES",
+      "n_overlap": 4,
+      "n_pathway": 51,
+      "p_value": 0.009808123649012486,
+      "genes": [
+        "CYP2A6",
+        "CYP2A7",
+        "CYP3A4",
+        "UGT1A4"
+      ]
+    },
+    {
+      "pathway": "KEGG_HISTIDINE_METABOLISM",
+      "n_overlap": 3,
+      "n_pathway": 29,
+      "p_value": 0.011835169004920869,
+      "genes": [
+        "ALDH3A1",
+        "CNDP1",
+        "UROC1"
+      ]
+    },
+    {
+      "pathway": "KEGG_STEROID_HORMONE_BIOSYNTHESIS",
+      "n_overlap": 4,
+      "n_pathway": 55,
+      "p_value": 0.012730406803462551,
+      "genes": [
+        "CYP17A1",
+        "CYP1A1",
+        "CYP3A4",
+        "UGT1A4"
+      ]
+    }
+  ]
+}
