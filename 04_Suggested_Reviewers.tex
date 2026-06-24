@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Suggested Reviewers}}
+\vspace{4pt}
+
+{\normalsize CAGate: Cluster-Aware Gating for Differentiable Causal Discovery in Cancer Genomics}
+\vspace{2pt}
+
+{\small Shuaidong Gao}
+\end{center}
+
+\vspace{0.8cm}
+
+\noindent We respectfully suggest five reviewers whose expertise spans the three pillars of this work---causal discovery methodology, computational cancer genomics, and gene regulatory network inference. All are active mid-career researchers. None have co-authored with, collaborated with, or been affiliated with the author or with Carnegie Mellon University, where the NOTEARS baseline originated.
+
+\vspace{0.5cm}
+
+\noindent\textbf{1. Caroline Uhler, Ph.D.}\\
+Professor of EECS, Massachusetts Institute of Technology\\
+Core Institute Member, Broad Institute of MIT and Harvard\\
+\href{mailto:cuhler@mit.edu}{cuhler@mit.edu}\\
+\href{https://www.carolineuhler.com}{carolineuhler.com}\\[4pt]
+\textit{Expertise:} Causal inference, graphical models, representation learning for genomics.\\
+\textit{Relevance:} Uhler's research sits at the intersection of causal discovery and gene regulation---the core of CAGate. She can evaluate both the technical novelty (cluster-aware gating within NOTEARS) and the biological validity of the pan-cancer causal edges, including multi-database validation against CTD, ClinGen, and STRING.
+
+\vspace{0.4cm}
+
+\noindent\textbf{2. Sach Mukherjee, Ph.D.}\\
+MRC Investigator, MRC Biostatistics Unit, University of Cambridge\\
+Group Leader, German Center for Neurodegenerative Diseases (DZNE)\\
+\href{mailto:sach.mukherjee@mrc-bsu.cam.ac.uk}{sach.mukherjee@mrc-bsu.cam.ac.uk}\\
+\href{https://www.mrc-bsu.cam.ac.uk/people/in-alphabetical-order/h-to-m/sach-mukherjee/}{MRC BSU profile}\\[4pt]
+\textit{Expertise:} Causal structure learning in high-dimensional biomedicine, deep causal discovery.\\
+\textit{Relevance:} Mukherjee develops causal discovery methods for high-dimensional biology with limited sample sizes---exactly the regime CAGate targets. He can assess whether cluster-aware gating meaningfully advances NOTEARS, and whether our 68-configuration pan-cancer benchmark (33 cancers, $\Delta = +158$ mean edges) is methodologically rigorous.
+
+\vspace{0.4cm}
+
+\noindent\textbf{3. Casey S. Greene, Ph.D.}\\
+Professor and Chair, Biomedical Informatics, University of Colorado Anschutz Medical Campus\\
+Director, Center for Health AI\\
+\href{mailto:casey.s.greene@cuanschutz.edu}{casey.s.greene@cuanschutz.edu}\\
+\href{https://greenelab.com}{greenelab.com}\\[4pt]
+\textit{Expertise:} Gene regulatory network inference, functional genomics, integrative bioinformatics, transcriptomic data analysis.\\
+\textit{Relevance:} Greene's lab develops methods for reconstructing gene regulatory networks from large-scale transcriptomic data. He can evaluate whether CAGate's cluster-weighted loss function produces biologically meaningful edges, assess the external validation strategy, and judge the significance of the small-sample amplification effect ($n < 323$, $\Delta = +213$).
+
+\vspace{0.4cm}
+
+\noindent\textbf{4. Trey Ideker, Ph.D.}\\
+Professor, Departments of Medicine and Bioengineering, UC San Diego\\
+Director, Cancer Cell Map Initiative\\
+\href{mailto:tideker@ucsd.edu}{tideker@ucsd.edu}\\
+\href{https://idekerlab.ucsd.edu}{idekerlab.ucsd.edu}\\[4pt]
+\textit{Expertise:} Cancer systems biology, network-based methods, multi-omics integration.\\
+\textit{Relevance:} Ideker is a pioneer in constructing and interpreting cancer molecular networks. He can evaluate the biological significance of CAGate's 33-cancer causal edges, the claim that 78\% of CAGate-unique edges connect co-expressed genes (vs.\ 42\% for NOTEARS), and whether the method yields actionable therapeutic hypotheses.
+
+\vspace{0.4cm}
+
+\noindent\textbf{5. Jonas Peters, Ph.D.}\\
+Professor of Statistics, Department of Mathematics, ETH Zurich\\
+Co-author, \textit{Elements of Causal Inference} (MIT Press, 2017)\\
+\href{mailto:jonas.peters@stat.math.ethz.ch}{jonas.peters@stat.math.ethz.ch}\\
+\href{https://people.math.ethz.ch/~jopeters/}{ETH profile}\\[4pt]
+\textit{Expertise:} Causal discovery, invariant prediction, distribution generalization, high-dimensional statistics.\\
+\textit{Relevance:} Peters co-authored the definitive causal inference textbook and has deep expertise in evaluating causal DAG learning methods. He can rigorously assess the statistical properties of CAGate's MAD-aware gate, the NOTEARS acyclicity constraint, the synthetic benchmark (NOTEARS collapse at $d > 150$, CAGate recovers $552 \pm 34$ edges at $d = 200$), and whether the cluster-residual feedback loop introduces any statistical bias.
+
+\vspace{0.8cm}
+
+\noindent\rule{\textwidth}{0.5pt}
+\vspace{0.3cm}
+
+\noindent\textbf{Conflicts of Interest:} None of the suggested reviewers have collaborated with, co-authored with, or supervised the author. No reviewer is affiliated with Carnegie Mellon University (where the NOTEARS baseline originated) to avoid any appearance of institutional conflict. We understand the editor may select different reviewers at their discretion and appreciate any guidance toward experts best suited to evaluate this work.
+
+\end{document}

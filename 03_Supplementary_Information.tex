@@ -93,7 +93,7 @@ The median absolute deviation (MAD) is defined as:
 \[
 \text{MAD}(x) = \text{median}(|x_i - \text{median}(x)|)
 \]
-For normally distributed data, $\text{MAD} \approx 0.6745 \cdot \sigma$. The MAD is used in the gate function (Equation~2 in main text) rather than standard deviation because it has a breakdown point of 50\%---meaning up to half the samples in a cluster can be outliers without substantially affecting the gate weight. This is important for cancer transcriptomic data, where technical artifacts (degraded samples, amplification bias) and biological extremes (hyperexpressed oncogenes) produce heavy-tailed expression distributions.
+For normally distributed data, $\text{MAD} \approx 0.6745 \cdot \sigma$. We chose MAD over standard deviation in the gate function (Equation~2, main text) because MAD has a breakdown point of 50\%: up to half the samples in a cluster can be outliers without substantially shifting the gate weight. This matters for cancer transcriptomics, where technical artifacts (degraded samples, amplification bias) and genuine biological extremes (hyperexpressed oncogenes) routinely produce heavy-tailed distributions that would inflate variance-based gate weights.
 
 % ═══════════════════════════════════════════════════════════════
 \newpage
@@ -356,22 +356,11 @@ For each TCGA cancer type, we monitored three convergence metrics across CAGate 
     \item \textbf{Gate weight stability:} $\max_k |\gamma_k^{(t+1)} - \gamma_k^{(t)}|$. Gate weights stabilized by iteration 6 on average (range 4--9), indicating that cluster assignments converged before the final DAG structure.
 \end{enumerate}
 
-The early convergence of gate weights (before edge count stabilization) is a desirable property: it means CAGate identifies the relevant sample partitioning early in optimization and uses the remaining iterations to refine the DAG structure within that partitioning. This decoupling of clustering convergence from DAG convergence reduces the risk that the final graph is sensitive to the specific cluster assignments at the terminal iteration.
+Gate weights converging before edge counts is encouraging: it means CAGate locks in the relevant sample partitioning early, then uses the remaining iterations purely to refine the DAG. This temporal separation reduces the chance that the final graph depends sensitively on which specific clusters happen to form in the last iteration.
 
-\subsection*{SN11. Data Availability and Reproducibility}
+\subsection*{SN11. Reproducibility}
 
-All TCGA data used in this study are publicly available from UCSC Xena (\url{https://xenabrowser.net/datapages/}). The specific dataset identifiers are: TCGA-BRCA (HiSeqV2, $\log_2(\text{TPM}+1)$), and analogously for the other 32 cancer types listed in Supplementary Table~\ref{tab:s1}. Data were downloaded on 2026-05-20; file hashes are recorded in the replication package manifest.
-
-The complete experimental pipeline---from raw data download through preprocessing, CAGate/NOTEARS execution, and figure generation---is available in the replication package at \url{https://github.com/gsd3247186514-cell/cdsm}. The package includes:
-\begin{itemize}[leftmargin=*,itemsep=2pt]
-    \item Python scripts for data preprocessing and CAGate execution (70+ scripts)
-    \item Pre-computed results in JSON format for all 68 configurations (10 checkpoint files)
-    \item Scripts for generating all main-text and supplementary figures
-    \item A README with step-by-step reproduction instructions
-    \item Environment specification (\texttt{environment.yml})
-\end{itemize}
-
-All experiments were conducted with fixed random seeds for reproducibility. The hardware specification and software versions are detailed in Methods~S2.7 of the main text.
+All TCGA data are publicly available from UCSC Xena (\url{https://xenabrowser.net/datapages/}), downloaded via \texttt{cagate/download\_tcga.py} with recorded file hashes. The complete pipeline---TCGA download, preprocessing, CAGate/NOTEARS execution, and figure generation---is available at \url{https://github.com/gsd3247186514-cell/CAGate-Replication}. The repository contains: 10 self-contained figure-generation scripts in \texttt{scripts/}, core algorithm modules in \texttt{cagate/}, pre-computed benchmark results in \texttt{data/mega\_33\_full.json}, external validation data in \texttt{results/validation/}, and a README with single-command reproduction instructions. All experiments use fixed random seeds. The hardware specification and software versions are in the main manuscript Methods.
 
 \newpage
 \subsection*{SN12. Hyperparameter Sensitivity Analysis}
@@ -396,11 +385,11 @@ $\lambda_1$ & $\alpha=0.1$ & $\alpha=0.3$ & $\alpha=0.5$ & $\alpha=0.7$ & $\alph
 \end{tabular}
 \end{table}
 
-Key findings:
+The patterns are clear:
 \begin{itemize}[leftmargin=*,itemsep=2pt]
-    \item $\alpha = 0.5$ (midpoint sensitivity) consistently maximizes $\Delta$ across $\lambda_1$ values.
-    \item $\lambda_1 = 0.10$ (NOTEARS default) gives the best balance of sparsity and recall. Smaller $\lambda_1$ (0.01) under-penalizes and recovers noisy edges; larger $\lambda_1$ (0.50, 1.00) over-penalizes and misses true edges.
-    \item The interaction is additive: no $(\lambda_1, \alpha)$ combination performs well if either is at an extreme. The recommended default $(0.10, 0.5)$ is robust across cancer types (validated on 5 additional cancers in Table~\ref{tab:s8}).
+    \item $\alpha = 0.5$ consistently maximizes $\Delta$ across $\lambda_1$ values---neither too flat ($\alpha < 0.3$) nor too steep ($\alpha > 0.7$).
+    \item $\lambda_1 = 0.10$ gives the best balance. Smaller values under-penalize and admit noisy edges; larger values over-penalize and suppress true edges, eventually causing NOTEARS-level collapse at $\lambda_1 = 1.0$.
+    \item No edge-count inflation: at extreme hyperparameters, CAGate does not produce spuriously high edge counts. This confirms that the gating mechanism is self-regulating rather than a free parameter for inflating results.
 \end{itemize}
 
 \begin{table}[htbp]
@@ -425,7 +414,7 @@ LIHC ($n=373$) & 245 & 86 & +159 \\
 
 \subsection*{SN13. ENCODE Motif Validation for Top Hubs}
 
-As a complementary validation to database overlap (Table~2, main text), we assess whether CAGate edges are enriched for known transcription factor binding motifs. We obtained ENCODE ChIP-Seq peak files for 12 TFs with high CAGate out-degree in TCGA-BRCA (ESR1, FOXA1, GATA3, MYC, TP53, etc.). For each TF, we define ``motif-matched edges'' as CAGate edges $i \to j$ where TF $i$'s DNA-binding motif is enriched within 5~kb upstream of gene $j$'s TSS (FIMO scan, $E$-value $< 10^{-4}$).
+As a complementary validation to the clinical database overlap in the main text (Figure~4), we assess whether CAGate edges are enriched for known transcription factor binding motifs. We obtained ENCODE ChIP-Seq peak files for 12 TFs with high CAGate out-degree in TCGA-BRCA (ESR1, FOXA1, GATA3, MYC, TP53, etc.). For each TF, we define ``motif-matched edges'' as CAGate edges $i \to j$ where TF $i$'s DNA-binding motif is enriched within 5~kb upstream of gene $j$'s TSS (FIMO scan, $E$-value $< 10^{-4}$).
 
 \begin{table}[htbp]
 \centering
@@ -454,7 +443,7 @@ RELA & 8 & 4 (50\%) & 3 & 1 (33\%) \\
 \end{tabular}
 \end{table}
 
-CAGate edges are significantly enriched for ENCODE-validated motifs compared to NOTEARS edges (58\% vs.\ 37\%, $p = 0.004$, paired $t$-test across 12 TFs). This indicates that CAGate's cluster-aware gating recovers edges with higher functional relevance, not merely more edges. The motif enrichment is particularly strong for ESR1 and FOXA1 (71\% and 68\%), consistent with their established role as master regulators in luminal breast cancer.
+CAGate edges are significantly enriched for ENCODE-validated motifs over NOTEARS edges (mean 58\% vs.\ 37\%, $p = 0.004$, paired $t$-test across 12 TFs). This directly addresses a natural concern---that CAGate merely produces more edges without improving quality---by showing that the additional edges carry motif-level evidence for direct transcriptional regulation. The strongest enrichment appears for ESR1 (71\%) and FOXA1 (68\%), which is reassuring: these are the two best-characterized master regulators of luminal breast cancer, and CAGate's cluster-aware gating correctly prioritizes edges emanating from them.
 
 % ═══════════════════════════════════════════════════════════════
 \newpage
@@ -522,9 +511,9 @@ CAGate edges are significantly enriched for ENCODE-validated motifs compared to 
 \newpage
 \section*{Supplementary Notes}
 
-\subsection*{SN1. NOTEARS Failure Mode Analysis}
+\subsection*{SN1. NOTEARS Failure Mode: Why the Collapse Happens}
 
-The NOTEARS collapse at $d \gtrsim 150$ can be analyzed through the lens of the augmented Lagrangian dynamics. At each outer iteration, the inner L-BFGS-B solver minimizes:
+The NOTEARS collapse at $d \gtrsim 150$ stems from a simple mechanism in the augmented Lagrangian dynamics. At each outer iteration, the inner L-BFGS-B solver minimizes:
 \[
 \mathcal{L}(W) = \underbrace{\frac{1}{2n}\|X - XW\|_F^2}_{\text{MSE}} + \underbrace{\lambda_1\|W\|_1}_{\text{Sparsity}} + \underbrace{\frac{\rho}{2}h(W)^2 + \alpha_{\text{lag}} h(W)}_{\text{Acyclicity}}
 \]
@@ -562,149 +551,7 @@ Edge count increases monotonically with $\alpha$ because larger $\alpha$ makes t
 
 All experiments used fixed random seeds (seed $= 42$ for NumPy/PyTorch, seed offset for each of the 10 synthetic replicates). The TCGA data were downloaded from UCSC Xena on 2026-05-20 and stored locally; exact file hashes are provided in the replication package. The full experimental pipeline---from data download to figure generation---is contained in the accompanying replication scripts.
 
-\subsection*{SN4. Comparison with NOTEARS-MLP (Nonlinear)}
-
-We also tested the nonlinear NOTEARS variant (NOTEARS-MLP) with a 1-hidden-layer MLP (40 hidden units, ReLU activation) on the high-dimensional benchmark. NOTEARS-MLP exhibited the same collapse behavior as linear NOTEARS: zero edges at $d=200$. The nonlinear parameterization does not address the fundamental gradient dilution problem in high dimensions. CAGate's cluster-aware gating operates at the loss-function level and is orthogonal to the linear/nonlinear choice of the structural equation model.
-
-% ═══════════════════════════════════════════════════════════════
-\newpage
-
-\begin{thebibliography}{99}
-
-\bibitem{zheng2018dags}
-Zheng X, Aragam B, Ravikumar P, Xing EP.
-DAGs with NO TEARS: Continuous optimization for structure learning.
-\textit{Advances in Neural Information Processing Systems}, 2018;31:9472--9483.
-
-\bibitem{rousseeuw1987silhouettes}
-Rousseeuw PJ.
-Silhouettes: A graphical aid to the interpretation and validation of cluster analysis.
-\textit{Journal of Computational and Applied Mathematics}, 1987;20:53--65.
-
-\bibitem{pamfil2020dynotears}
-Pamfil R, Sriwattanaworachai N, Desai S, Pilgerstorfer P, Georgatzis K, Beaumont P, Aragam B.
-DYNOTEARS: Structure learning from time-series data.
-\textit{Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics (AISTATS)}, 2020;1595--1605.
-
-\bibitem{tibshirani2005cluster}
-Tibshirani R, Walther G, Hastie T.
-Cluster validation by prediction strength.
-\textit{Journal of Computational and Graphical Statistics}, 2005;14(3):511--528.
-
-\bibitem{langfelder2008wgcna}
-Langfelder P, Horvath S.
-WGCNA: an R package for weighted correlation network analysis.
-\textit{BMC Bioinformatics}, 2008;9:559.
-
-\bibitem{traag2019louvain}
-Traag VA, Waltman L, van Eck NJ.
-From Louvain to Leiden: guaranteeing well-connected communities.
-\textit{Scientific Reports}, 2019;9:5233.
-
-\bibitem{faith2007large}
-Faith JJ, Hayete B, Thaden JT, Mogno I, Wierzbowski J, Cottarel G, Kasif S, Collins JJ, Gardner TS.
-Large-scale mapping and validation of Escherichia coli transcriptional regulation from a compendium of expression profiles.
-\textit{PLoS Biology}, 2007;5(1):e8.
-
-\bibitem{moerman2019grnboost2}
-Moerman T, Aibar Santos S, Bravo Gonz\'{a}lez-Blas C, Simm J, Moreau Y, Aerts J, Aerts S.
-GRNBoost2 and Arboreto: efficient and scalable inference of gene regulatory networks.
-\textit{Bioinformatics}, 2019;35(12):2159--2161.
-
-\bibitem{friedman2000using}
-Friedman N, Linial M, Nachman I, Pe'er D.
-Using Bayesian networks to analyze expression data.
-\textit{Journal of Computational Biology}, 2000;7(3--4):601--620.
-
-\bibitem{marbach2012wisdom}
-Marbach D, Costello JC, K\"{u}ffner R, Vega NM, Prill RJ, Camacho DM, et al.
-Wisdom of crowds for robust gene network inference.
-\textit{Nature Methods}, 2012;9(8):796--804.
-
-\bibitem{wang2024construction}
-Wang X, Zhang Y, Li J, Chen Z, Liu H.
-Construction of pan-cancer regulatory networks based on causal inference.
-\textit{Chemometrics and Intelligent Laboratory Systems}, 2024;252:105173.
-
-\bibitem{chen2021dags}
-Chen W, Drton M, Wang YS.
-On causal discovery with an equal-variance assumption.
-\textit{Biometrika}, 2021;106(4):973--980.
-
-\bibitem{shimizu2006lingam}
-Shimizu S, Hoyer PO, Hyv\"{a}rinen A, Kerminen A.
-A linear non-Gaussian acyclic model for causal discovery.
-\textit{Journal of Machine Learning Research}, 2006;7:2003--2030.
-
-\bibitem{maxwell2017highdimensional}
-Maxwell SE, Delaney HD, Kelley K.
-\textit{Designing Experiments and Analyzing Data: A Model Comparison Perspective}. 3rd ed. Routledge, 2017.
-
-\bibitem{zhang2018generalized}
-Zhang K, Sch\"{o}lkopf B, Spirtes P, Glymour C.
-Learning causality and causality-related learning: some recent progress.
-\textit{National Science Review}, 2018;5(1):26--29.
-
-\bibitem{robinson2012foxa1}
-Robinson JLL, Yu Y, Chua YL, Bland P, Lim E, Wai T, et al.
-FOXA1--estrogen receptor alpha interaction and its clinical impact.
-\textit{Nucleic Acids Research}, 2012;40(18):8475--8485.
-
-\bibitem{prat2019runx2}
-Prat A, Pineda S, Bassaganyas L, Hu X, Peg V, Ceda M, et al.
-RUNX2 in breast cancer: current evidence and future directions.
-\textit{International Journal of Molecular Sciences}, 2019;20(18):4362.
-
-\bibitem{wishart2018drugbank}
-Wishart DS, Feunang YD, Guo AC, Lo EJ, Marcu A, Grant JR, et al.
-DrugBank 5.0: a major update to the DrugBank database for 2018.
-\textit{Nucleic Acids Research}, 2018;46(D1):D1074--D1082.
-
-\bibitem{davis2021comparative}
-Davis AP, Grondin CJ, Johnson RJ, Sciaky D, King BL, McMorran R, et al.
-The Comparative Toxicogenomics Database: update 2021.
-\textit{Nucleic Acids Research}, 2021;49(D1):D1138--D1143.
-
-\bibitem{johnson2007adjusting}
-Johnson WE, Li C, Rabinovic A.
-Adjusting batch effects in microarray expression data using empirical Bayes methods.
-\textit{Biostatistics}, 2007;8(1):118--127.
-
-\bibitem{teh2006hierarchical}
-Teh YW, Jordan MI, Beal MJ, Blei DM.
-Hierarchical Dirichlet processes.
-\textit{Journal of the American Statistical Association}, 2006;101(476):1566--1581.
-
-\bibitem{frot2020robust}
-Frot B, Nandy P, Mackay I, Rohart F.
-Inference of causal and mediating effects with high-dimensional and dependent data.
-\textit{Journal of the Royal Statistical Society: Series B (Statistical Methodology)}, 2020;82(4):1021--1044.
-
-\bibitem{zheng2020nonparametric}
-Zheng X, Dan C, Aragam B, Ravikumar P, Xing EP.
-Learning nonparametric DAGs with incremental smoothing.
-\textit{Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics (AISTATS)}, 2020;in PMLR 108:64--74.
-
-\bibitem{tsherniak2017defining}
-Tsherniak E, Vazquez F, Montgomery PG, Weir BA, Kryukov G, Cowley GS, et al.
-Defining a cancer dependency map.
-\textit{Cell}, 2017;170(3):564--576.
-
-\bibitem{iorio2016landscape}
-Iorio F, Knijnenburg TA, Vis DJ, Bignell GR, Menden MP, Lehmann KV, et al.
-A landscape of pharmacogenomic interactions in cancer.
-\textit{Cell}, 2016;166(3):740--754.
-
-\bibitem{vaske2010inference}
-Vaske HM, Cuni AV, Ljung BM, Ahmad S, Brooks JD, Belnick M, et al.
-Inference of gene regulatory networks from cancer genomic data.
-\textit{Proceedings of the IEEE}, 2010;98(7):824--838.
-
-\bibitem{cancer2012comprehensive}
-Cancer Genome Atlas Research Network.
-Comprehensive molecular characterization of human colon and rectal cancer.
-\textit{Nature}, 2012;487(7407):330--337.
-
-\end{thebibliography}
+\vspace{12pt}
+\noindent\textit{References.} All references are listed in the main manuscript (01\_Manuscript.pdf).
 
 \end{document}
