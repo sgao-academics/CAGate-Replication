@@ -9,6 +9,8 @@ Replication package for *CAGate: Cluster-Aware Gating Rescues Differentiable Cau
 
 CAGate extends NOTEARS with adaptive cluster-aware gating. Across 33 TCGA cancers, CAGate outperforms NOTEARS in all 33 (mean +158 edges). At d=200, CAGate recovers 550+ edges where NOTEARS finds zero.
 
+> **🔧 Production users:** The full CAGate implementation — plus NOTEARS, GOLEM, DAGMA, Causal Transformer, LowRankGNN, and 12+ diagnostic tools — lives in **[causalscale](https://github.com/sgao-academics/causalscale)** (37⭐). `pip install causalscale` for the complete differentiable causal discovery toolkit. This repo contains the minimal replication materials for the Bioinformatics paper.
+
 ## Quick Start
 
 ```bash
@@ -46,9 +48,6 @@ No GPU. No internet. No TCGA download. Outputs to `figures/` and `figures_supple
 }
 ```
 
-## Related
-
-- [causalscale](https://github.com/sgao-academics/causalscale) — Unified causal discovery engine (CAGate, NOTEARS, GOLEM, DAGMA)
-- Patent: CNIPA application 202611098494.0 (filed July 23, 2026)
+Patent: CNIPA application 202611098494.0 (filed July 23, 2026).
 
 MIT License.
