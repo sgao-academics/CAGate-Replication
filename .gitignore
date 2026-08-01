@@ -1,0 +1,27 @@
+# Generated output
+figures/
+figures_supplementary/
+__pycache__/
+
+# Python
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# IDE
+.vscode/
+.idea/
