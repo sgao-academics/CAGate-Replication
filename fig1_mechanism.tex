@@ -1,5 +1,8 @@
 % CAGate Fig1 — Mechanism Diagram (TikZ, colorblind-safe Okabe-Ito palette)
-% Generous spacing: zero overlap guaranteed
+% Residual-contrast gate, corrected direction: clusters whose residuals are MORE
+% dispersed than the median are ATTENUATED (gamma < 1/2); coherent, tightly-fit
+% clusters are up-weighted (gamma > 1/2).  This matches eq:gate, the solver and
+% the reported results.
 \documentclass[tikz,border=8pt]{standalone}
 \usepackage{amsmath,amssymb}
 \usepackage{tikz}
@@ -23,14 +26,13 @@
   note/.style={font=\footnotesize, text=cbDark},
   title/.style={font=\bfseries\footnotesize, text=cbDark},
   cluster_label/.style={font=\footnotesize\bfseries},
-  % Use picture bounding box to prevent clips
 ]
 
 % ══════════════════════════════════════════
 % PANEL (a): NOTEARS — Pooled Optimization
 % ══════════════════════════════════════════
-\node[title] at (0, 0) {\textbf{a}~~NOTEARS: Pooled optimization — all samples mixed};
-\node[note, text=cbOrange] at (0, -0.55) {Gradient signal diluted into heterogeneous noise};
+\node[title] at (0, 0) {\textbf{a}~~NOTEARS: Pooled optimization --- all samples mixed};
+\node[note, text=cbOrange] at (0, -0.55) {Every sample weighted alike: the most dispersed subpopulations dominate the loss};
 
 % Large pooled cluster box
 \node[cluster_box, minimum width=8.0cm, minimum height=2.4cm] (pool) at (0, -2.3) {};
@@ -59,52 +61,50 @@
   $\displaystyle \min_W \; \frac{1}{2n}\|\mathbf{X} - \mathbf{X}W\|_F^2 + \lambda_1\|W\|_1$
   \quad {\footnotesize\textcolor{cbOrange}{s.t.}~$h(W)=0$}};
 
-% Failure callout
+% Callout
 \node[note, text=cbOrange, align=center] at (0, -5.75) {
-  $\Longrightarrow$\ \textbf{High-$d$ failure}: gradient dominated by noise\\
-  L1 regularization drives $W \to \mathbf{0}$, zero edges recovered};
+  $\Longrightarrow$\ \textbf{No sample is down-weighted}: the scatter of every subpopulation\\
+  travels into the structural gradient, injecting spurious edges};
 
 % ══════════════════════════════════════════
 % PANEL (b): CAGate — Cluster-Aware Gating
 % ══════════════════════════════════════════
-\node[title] at (0, -7.5) {\textbf{b}~~CAGate: Cluster-aware gating — structure-rich subpopulations weighted};
-\node[note, text=cbBlue] at (0, -8.15) {MAD-aware gate $\gamma_k$ amplifies structure-rich clusters, suppresses noise-dominated ones};
+\node[title] at (0, -7.5) {\textbf{b}~~CAGate: Cluster-aware gating --- coherent subpopulations weighted, dispersed ones attenuated};
+\node[note, text=cbBlue] at (0, -8.15) {Residual-contrast gate $\gamma_k$ down-weights the clusters whose residuals are the most dispersed};
 
-% ── Top row: Cluster A (structure-rich) and Cluster B (noisy) ──
-% Cluster A — high MAD, high weight
+% ── Cluster A (coherent, low dispersion) — high weight ──
 \node[cluster_box, fill=cbBlue!5, draw=cbBlue!45, minimum width=3.2cm, minimum height=2.4cm] (clA) at (-2.8, -10.2) {};
 \node[cluster_label, text=cbBlue] at (-2.8, -8.9) {Cluster A};
-\node[note, text=cbBlue!80] at (-2.8, -9.35) {High MAD, structure-rich};
-% Samples inside Cluster A
+\node[note, text=cbBlue!80] at (-2.8, -9.35) {Low dispersion, coherent};
 \foreach \x in {-3.8,-3.3,-2.8,-2.3,-1.8} {
   \foreach \y in {-10.9,-10.5,-10.1,-9.7} {
-    \pgfmathsetmacro\dx{rnd*0.12-0.06}
-    \pgfmathsetmacro\dy{rnd*0.12-0.06}
+    \pgfmathsetmacro\dx{rnd*0.07-0.035}
+    \pgfmathsetmacro\dy{rnd*0.07-0.035}
     \node[sample, fill=cbBlue!12, draw=cbBlue!35] at (\x+\dx, \y+\dy) {};
   }
 }
 
-% Cluster B — low MAD, suppressed
+% ── Cluster B (dispersed, high dispersion) — low weight ──
 \node[cluster_box, fill=cbOrange!4, draw=cbOrange!35, minimum width=2.6cm, minimum height=2.4cm] (clB) at (1.8, -10.2) {};
 \node[cluster_label, text=cbOrange] at (1.8, -8.9) {Cluster B};
-\node[note, text=cbOrange!80] at (1.8, -9.35) {Low MAD, noisy};
+\node[note, text=cbOrange!80] at (1.8, -9.35) {High dispersion, noisy};
 \foreach \x in {1.0,1.4,1.8,2.2,2.6} {
   \foreach \y in {-10.9,-10.5,-10.1,-9.7} {
-    \pgfmathsetmacro\dx{rnd*0.12-0.06}
-    \pgfmathsetmacro\dy{rnd*0.12-0.06}
+    \pgfmathsetmacro\dx{rnd*0.42-0.21}
+    \pgfmathsetmacro\dy{rnd*0.42-0.21}
     \node[sample, fill=cbOrange!12, draw=cbOrange!35] at (\x+\dx, \y+\dy) {};
   }
 }
 
-% ── Bottom row: Cluster C (intermediate) ──
+% ── Bottom row: Cluster C (median dispersion, reference) ──
 \node[cluster_box, fill=cbPurple!4, draw=cbPurple!35, minimum width=2.6cm, minimum height=2.0cm] (clC) at (-0.5, -13.0) {};
 \node[cluster_label, text=cbPurple] at (-0.5, -11.85) {Cluster C};
-\node[note, text=cbPurple!80] at (-0.5, -12.25) {Intermediate MAD};
+\node[note, text=cbPurple!80] at (-0.5, -12.25) {Median dispersion (reference)};
 
 \foreach \x in {-1.4,-1.0,-0.6,-0.2,0.2} {
   \foreach \y in {-13.6,-13.2,-12.8} {
-    \pgfmathsetmacro\dx{rnd*0.12-0.06}
-    \pgfmathsetmacro\dy{rnd*0.12-0.06}
+    \pgfmathsetmacro\dx{rnd*0.22-0.11}
+    \pgfmathsetmacro\dy{rnd*0.22-0.11}
     \node[sample, fill=cbPurple!12, draw=cbPurple!35] at (\x+\dx, \y+\dy) {};
   }
 }
@@ -114,15 +114,15 @@
   $\displaystyle \min_W \; \frac{1}{2n}\!\sum_{k=1}^{K}\! \textcolor{cbGreen}{\gamma_k}\!\cdot\!\|\mathbf{X}^{(k)}\!-\!\mathbf{X}^{(k)}W\|_F^2 \;+\; \lambda_1\|W\|_1$
   \\[2pt]
   {\footnotesize\textcolor{cbBlue}{s.t.}~$h(W)=0$,
-   \quad $\textcolor{cbGreen}{\gamma_k}=1-e^{-\alpha\cdot\overline{\mathrm{MAD}}_k}$}};
+   \quad $\textcolor{cbGreen}{\gamma_k}=1/(1+e^{-\alpha(\bar{\sigma}-\sigma_k)})$}};
 
-% ── Gate arrows from clusters to loss box ──
-\draw[arrow, cbGreen, line width=1.5pt] (clA.south) -- (clA.south |- loss_b.north)
+% ── Gate arrows from clusters to loss box (thickness = gate weight) ──
+\draw[arrow, cbGreen, line width=1.7pt] (clA.south) -- (clA.south |- loss_b.north)
   node[pos=0.55, right=3pt, font=\footnotesize\bfseries, text=cbGreen] {$\gamma_A\approx 0.9$};
-\draw[arrow, cbOrange!50, line width=0.5pt] (clB.south) -- (clB.south |- loss_b.north)
+\draw[arrow, cbOrange!40, line width=0.4pt] (clB.south) -- (clB.south |- loss_b.north)
   node[pos=0.55, right=3pt, font=\footnotesize, text=cbOrange!70] {$\gamma_B\approx 0.1$};
-\draw[arrow, cbPurple!50, line width=0.6pt] (clC.south) -- (clC.south |- loss_b.north)
-  node[pos=0.55, right=3pt, font=\footnotesize, text=cbPurple!70] {$\gamma_C\approx 0.2$};
+\draw[arrow, cbPurple!50, line width=0.9pt] (clC.south) -- (clC.south |- loss_b.north)
+  node[pos=0.55, right=3pt, font=\footnotesize, text=cbPurple!70] {$\gamma_C\approx 0.5$};
 
 % Highlight ring around loss formula
 \begin{scope}[on background layer]
@@ -132,8 +132,8 @@
 
 % ── Result callout ──
 \node[note, text=cbBlue, align=center] at (0, -16.5) {
-  $\Longrightarrow$\ \textbf{High-$d$ survival}: structure-rich cluster gradients dominate\\
-  CAGate recovers 550+ edges where NOTEARS finds zero};
+  $\Longrightarrow$\ \textbf{Precision, not volume}: a smaller graph whose edges\\
+  are more often confirmed by external databases (29.9\% vs 25.4\%; STRING $\geq 700$)};
 
 % ── Panel watermarks ──
 \node[font=\huge\bfseries, text=cbGray!20, scale=1.6] at (-5.4, -2.3) {a};
