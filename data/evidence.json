@@ -1,0 +1,705 @@
+{
+ "per_cancer": [
+  {
+   "cancer": "ACC",
+   "n": 79,
+   "notears": 53,
+   "base": 49,
+   "gate": 32,
+   "s_base": 12.24,
+   "s_gate": 18.75,
+   "s_notears": 11.32,
+   "s_rand": 1.08
+  },
+  {
+   "cancer": "BLCA",
+   "n": 426,
+   "notears": 54,
+   "base": 50,
+   "gate": 42,
+   "s_base": 46.0,
+   "s_gate": 47.62,
+   "s_notears": 44.44,
+   "s_rand": 1.86
+  },
+  {
+   "cancer": "BRCA",
+   "n": 1218,
+   "notears": 38,
+   "base": 37,
+   "gate": 30,
+   "s_base": 32.43,
+   "s_gate": 36.67,
+   "s_notears": 31.58,
+   "s_rand": 1.22
+  },
+  {
+   "cancer": "CESC",
+   "n": 308,
+   "notears": 51,
+   "base": 48,
+   "gate": 40,
+   "s_base": 41.67,
+   "s_gate": 47.5,
+   "s_notears": 39.22,
+   "s_rand": 1.99
+  },
+  {
+   "cancer": "CHOL",
+   "n": 45,
+   "notears": 93,
+   "base": 81,
+   "gate": 80,
+   "s_base": 19.75,
+   "s_gate": 20.0,
+   "s_notears": 18.28,
+   "s_rand": 5.86
+  },
+  {
+   "cancer": "COAD",
+   "n": 329,
+   "notears": 69,
+   "base": 69,
+   "gate": 56,
+   "s_base": 33.33,
+   "s_gate": 32.14,
+   "s_notears": 30.43,
+   "s_rand": 1.72
+  },
+  {
+   "cancer": "DLBC",
+   "n": 48,
+   "notears": 76,
+   "base": 67,
+   "gate": 43,
+   "s_base": 14.93,
+   "s_gate": 27.91,
+   "s_notears": 13.16,
+   "s_rand": 0.94
+  },
+  {
+   "cancer": "ESCA",
+   "n": 196,
+   "notears": 80,
+   "base": 77,
+   "gate": 72,
+   "s_base": 25.97,
+   "s_gate": 34.72,
+   "s_notears": 27.5,
+   "s_rand": 2.19
+  },
+  {
+   "cancer": "GBM",
+   "n": 172,
+   "notears": 74,
+   "base": 70,
+   "gate": 53,
+   "s_base": 25.71,
+   "s_gate": 24.53,
+   "s_notears": 22.97,
+   "s_rand": 1.66
+  },
+  {
+   "cancer": "HNSC",
+   "n": 566,
+   "notears": 78,
+   "base": 69,
+   "gate": 61,
+   "s_base": 46.38,
+   "s_gate": 42.62,
+   "s_notears": 35.9,
+   "s_rand": 4.3
+  },
+  {
+   "cancer": "KICH",
+   "n": 91,
+   "notears": 76,
+   "base": 75,
+   "gate": 65,
+   "s_base": 16.0,
+   "s_gate": 18.46,
+   "s_notears": 18.42,
+   "s_rand": 1.72
+  },
+  {
+   "cancer": "KIRC",
+   "n": 606,
+   "notears": 56,
+   "base": 60,
+   "gate": 50,
+   "s_base": 26.67,
+   "s_gate": 34.0,
+   "s_notears": 28.57,
+   "s_rand": 2.26
+  },
+  {
+   "cancer": "KIRP",
+   "n": 323,
+   "notears": 56,
+   "base": 57,
+   "gate": 48,
+   "s_base": 24.56,
+   "s_gate": 25.0,
+   "s_notears": 23.21,
+   "s_rand": 1.17
+  },
+  {
+   "cancer": "LAML",
+   "n": 173,
+   "notears": 65,
+   "base": 69,
+   "gate": 49,
+   "s_base": 34.78,
+   "s_gate": 40.82,
+   "s_notears": 35.38,
+   "s_rand": 1.64
+  },
+  {
+   "cancer": "LGG",
+   "n": 530,
+   "notears": 67,
+   "base": 66,
+   "gate": 57,
+   "s_base": 18.18,
+   "s_gate": 21.05,
+   "s_notears": 17.91,
+   "s_rand": 1.36
+  },
+  {
+   "cancer": "LIHC",
+   "n": 423,
+   "notears": 53,
+   "base": 48,
+   "gate": 40,
+   "s_base": 31.25,
+   "s_gate": 35.0,
+   "s_notears": 30.19,
+   "s_rand": 1.46
+  },
+  {
+   "cancer": "LUAD",
+   "n": 576,
+   "notears": 50,
+   "base": 50,
+   "gate": 41,
+   "s_base": 30.0,
+   "s_gate": 36.59,
+   "s_notears": 30.0,
+   "s_rand": 1.54
+  },
+  {
+   "cancer": "LUSC",
+   "n": 553,
+   "notears": 68,
+   "base": 67,
+   "gate": 60,
+   "s_base": 46.27,
+   "s_gate": 45.0,
+   "s_notears": 42.65,
+   "s_rand": 2.41
+  },
+  {
+   "cancer": "MESO",
+   "n": 87,
+   "notears": 56,
+   "base": 45,
+   "gate": 25,
+   "s_base": 28.89,
+   "s_gate": 44.0,
+   "s_notears": 28.57,
+   "s_rand": 1.13
+  },
+  {
+   "cancer": "OV",
+   "n": 308,
+   "notears": 33,
+   "base": 29,
+   "gate": 24,
+   "s_base": 6.9,
+   "s_gate": 12.5,
+   "s_notears": 9.09,
+   "s_rand": 0.38
+  },
+  {
+   "cancer": "PAAD",
+   "n": 183,
+   "notears": 83,
+   "base": 79,
+   "gate": 67,
+   "s_base": 26.58,
+   "s_gate": 34.33,
+   "s_notears": 33.73,
+   "s_rand": 3.67
+  },
+  {
+   "cancer": "PCPG",
+   "n": 187,
+   "notears": 53,
+   "base": 52,
+   "gate": 46,
+   "s_base": 17.31,
+   "s_gate": 21.74,
+   "s_notears": 20.75,
+   "s_rand": 1.92
+  },
+  {
+   "cancer": "PRAD",
+   "n": 550,
+   "notears": 51,
+   "base": 50,
+   "gate": 40,
+   "s_base": 30.0,
+   "s_gate": 35.0,
+   "s_notears": 29.41,
+   "s_rand": 1.66
+  },
+  {
+   "cancer": "READ",
+   "n": 105,
+   "notears": 70,
+   "base": 69,
+   "gate": 54,
+   "s_base": 28.99,
+   "s_gate": 27.78,
+   "s_notears": 27.14,
+   "s_rand": 1.75
+  },
+  {
+   "cancer": "SARC",
+   "n": 265,
+   "notears": 57,
+   "base": 55,
+   "gate": 47,
+   "s_base": 29.09,
+   "s_gate": 36.17,
+   "s_notears": 28.07,
+   "s_rand": 1.6
+  },
+  {
+   "cancer": "SKCM",
+   "n": 474,
+   "notears": 59,
+   "base": 53,
+   "gate": 50,
+   "s_base": 47.17,
+   "s_gate": 46.0,
+   "s_notears": 44.07,
+   "s_rand": 2.87
+  },
+  {
+   "cancer": "STAD",
+   "n": 450,
+   "notears": 65,
+   "base": 59,
+   "gate": 51,
+   "s_base": 44.07,
+   "s_gate": 45.1,
+   "s_notears": 36.92,
+   "s_rand": 1.69
+  },
+  {
+   "cancer": "TGCT",
+   "n": 156,
+   "notears": 85,
+   "base": 75,
+   "gate": 71,
+   "s_base": 21.33,
+   "s_gate": 16.9,
+   "s_notears": 18.82,
+   "s_rand": 1.98
+  },
+  {
+   "cancer": "THCA",
+   "n": 572,
+   "notears": 69,
+   "base": 68,
+   "gate": 62,
+   "s_base": 11.76,
+   "s_gate": 12.9,
+   "s_notears": 11.59,
+   "s_rand": 0.68
+  },
+  {
+   "cancer": "THYM",
+   "n": 122,
+   "notears": 78,
+   "base": 74,
+   "gate": 64,
+   "s_base": 13.51,
+   "s_gate": 17.19,
+   "s_notears": 12.82,
+   "s_rand": 1.07
+  },
+  {
+   "cancer": "UCEC",
+   "n": 201,
+   "notears": 45,
+   "base": 49,
+   "gate": 37,
+   "s_base": 6.12,
+   "s_gate": 8.11,
+   "s_notears": 6.67,
+   "s_rand": 0.73
+  },
+  {
+   "cancer": "UCS",
+   "n": 57,
+   "notears": 74,
+   "base": 70,
+   "gate": 50,
+   "s_base": 14.29,
+   "s_gate": 22.0,
+   "s_notears": 14.86,
+   "s_rand": 3.55
+  },
+  {
+   "cancer": "UVM",
+   "n": 80,
+   "notears": 66,
+   "base": 65,
+   "gate": 53,
+   "s_base": 15.38,
+   "s_gate": 16.98,
+   "s_notears": 15.15,
+   "s_rand": 1.03
+  }
+ ],
+ "tests": {
+  "gate - base (STRING)": {
+   "name": "gate - base (STRING)",
+   "mean": 3.5627272727272725,
+   "pos": 26,
+   "neg": 7,
+   "p": 0.00018812525589167648,
+   "n": 33
+  },
+  "gate - NOTEARS (STRING)": {
+   "name": "gate - NOTEARS (STRING)",
+   "mean": 4.4330303030303035,
+   "pos": 32,
+   "neg": 1,
+   "p": 1.6298145055770874e-08,
+   "n": 33
+  },
+  "base - NOTEARS (STRING)": {
+   "name": "base - NOTEARS (STRING)",
+   "mean": 0.8703030303030304,
+   "pos": 23,
+   "neg": 9,
+   "p": 0.04441214585230534,
+   "n": 33
+  },
+  "gate - base (edges)": {
+   "name": "gate - base (edges)",
+   "mean": -10.333333333333334,
+   "pos": 0,
+   "neg": 33,
+   "p": 5.220195293700712e-07,
+   "n": 33
+  },
+  "gate - NOTEARS (edges)": {
+   "name": "gate - NOTEARS (edges)",
+   "mean": -13.363636363636363,
+   "pos": 0,
+   "neg": 33,
+   "p": 5.253002832469851e-07,
+   "n": 33
+  },
+  "base - NOTEARS (edges)": {
+   "name": "base - NOTEARS (edges)",
+   "mean": -3.0303030303030303,
+   "pos": 4,
+   "neg": 27,
+   "p": 0.0002205811877454112,
+   "n": 33
+  },
+  "gate - base (either)": {
+   "name": "gate - base (either)",
+   "mean": 1.4857575757575758,
+   "pos": 14,
+   "neg": 3,
+   "p": 0.05521337554271477,
+   "n": 33
+  },
+  "gate - NOTEARS (either)": {
+   "name": "gate - NOTEARS (either)",
+   "mean": 1.3609090909090908,
+   "pos": 14,
+   "neg": 3,
+   "p": 0.03947435091450279,
+   "n": 33
+  },
+  "gate forward - reverse": {
+   "name": "gate forward - reverse",
+   "mean": 0.20484848484848484,
+   "pos": 6,
+   "neg": 6,
+   "p": 1.0,
+   "n": 33
+  }
+ },
+ "cluster": [
+  {
+   "d": 15,
+   "nc": 5,
+   "sp": 100,
+   "n": 500,
+   "n_seeds": 10,
+   "l1": 0.01,
+   "gate_alpha": 0.5,
+   "base_mean": 0.5569927916899273,
+   "gate_mean": 0.5941339592454119,
+   "delta_mean": 0.03714116755548458,
+   "base_std": 0.07097072390345521,
+   "gate_std": 0.06866779712082613,
+   "edges_base_mean": 26.5,
+   "edges_gate_mean": 29.3,
+   "base_all": [
+    0.4364,
+    0.6207,
+    0.6333,
+    0.4561,
+    0.6557,
+    0.4898,
+    0.56,
+    0.5714,
+    0.5538,
+    0.5926
+   ],
+   "gate_all": [
+    0.4727,
+    0.6316,
+    0.6885,
+    0.5333,
+    0.6562,
+    0.5517,
+    0.52,
+    0.678,
+    0.6061,
+    0.6032
+   ],
+   "secs": 53.8,
+   "gate_wins": 9
+  },
+  {
+   "d": 15,
+   "nc": 8,
+   "sp": 60,
+   "n": 480,
+   "n_seeds": 10,
+   "l1": 0.01,
+   "gate_alpha": 0.5,
+   "base_mean": 0.5478631553107405,
+   "gate_mean": 0.6032819045121318,
+   "delta_mean": 0.05541874920139134,
+   "base_std": 0.07165879096354544,
+   "gate_std": 0.07310901396629525,
+   "edges_base_mean": 27.4,
+   "edges_gate_mean": 27.5,
+   "base_all": [
+    0.4364,
+    0.6538,
+    0.625,
+    0.4746,
+    0.5862,
+    0.4706,
+    0.4906,
+    0.5455,
+    0.6154,
+    0.5806
+   ],
+   "gate_all": [
+    0.6415,
+    0.6909,
+    0.6774,
+    0.4918,
+    0.6333,
+    0.4615,
+    0.549,
+    0.6182,
+    0.6462,
+    0.623
+   ],
+   "secs": 53.8,
+   "gate_wins": 9
+  },
+  {
+   "d": 20,
+   "nc": 6,
+   "sp": 80,
+   "n": 480,
+   "n_seeds": 10,
+   "l1": 0.005,
+   "gate_alpha": 0.5,
+   "base_mean": 0.5661215641859236,
+   "gate_mean": 0.6053937002224634,
+   "delta_mean": 0.039272136036539784,
+   "base_std": 0.038564576816358206,
+   "gate_std": 0.04442541036677388,
+   "edges_base_mean": 36.0,
+   "edges_gate_mean": 38.3,
+   "base_all": [
+    0.5882,
+    0.6087,
+    0.587,
+    0.5135,
+    0.5714,
+    0.5412,
+    0.6329,
+    0.5405,
+    0.5063,
+    0.5714
+   ],
+   "gate_all": [
+    0.7123,
+    0.6133,
+    0.6364,
+    0.5823,
+    0.5846,
+    0.5926,
+    0.6341,
+    0.5714,
+    0.5814,
+    0.5455
+   ],
+   "secs": 81.8,
+   "gate_wins": 9
+  }
+ ],
+ "synth": [
+  {
+   "d": 100,
+   "seed": 0,
+   "n": 500,
+   "l1": 0.1,
+   "n_true_edges": 100,
+   "notears": {
+    "edges_0.3": 99,
+    "shd": 1,
+    "tpr": 0.99,
+    "fdr": 0.0,
+    "secs": 74.6
+   },
+   "cagate_c_base": {
+    "edges_0.3": 99,
+    "shd": 1,
+    "tpr": 0.99,
+    "fdr": 0.0,
+    "h": 4.316234480938874e-09,
+    "secs": 56.2
+   },
+   "cagate_c_gate": {
+    "edges_0.3": 96,
+    "shd": 6,
+    "tpr": 0.95,
+    "fdr": 0.0104,
+    "h": 2.6725359703050344e-09,
+    "secs": 48.8
+   },
+   "delta_edges": -3
+  },
+  {
+   "d": 150,
+   "seed": 0,
+   "n": 500,
+   "l1": 0.1,
+   "n_true_edges": 150,
+   "notears": {
+    "edges_0.3": 148,
+    "shd": 2,
+    "tpr": 0.9867,
+    "fdr": 0.0,
+    "secs": 274.6
+   },
+   "cagate_c_base": {
+    "edges_0.3": 146,
+    "shd": 4,
+    "tpr": 0.9733,
+    "fdr": 0.0,
+    "h": 7.740652563370531e-09,
+    "secs": 163.9
+   },
+   "cagate_c_gate": {
+    "edges_0.3": 136,
+    "shd": 16,
+    "tpr": 0.9,
+    "fdr": 0.0074,
+    "h": 8.93152218850446e-09,
+    "secs": 126.7
+   },
+   "delta_edges": -10
+  },
+  {
+   "d": 200,
+   "seed": 0,
+   "n": 500,
+   "l1": 0.1,
+   "n_true_edges": 200,
+   "notears": {
+    "edges_0.3": 191,
+    "shd": 13,
+    "tpr": 0.945,
+    "fdr": 0.0105,
+    "secs": 1061.6
+   },
+   "cagate_c_base": {
+    "edges_0.3": 188,
+    "shd": 16,
+    "tpr": 0.93,
+    "fdr": 0.0106,
+    "h": 1.825074491534906e-08,
+    "secs": 313.3
+   },
+   "cagate_c_gate": {
+    "edges_0.3": 178,
+    "shd": 26,
+    "tpr": 0.88,
+    "fdr": 0.0112,
+    "h": 1.4233592082746327e-08,
+    "secs": 323.4
+   },
+   "delta_edges": -10
+  },
+  {
+   "d": 30,
+   "seed": 0,
+   "n": 500,
+   "l1": 0.1,
+   "n_true_edges": 30,
+   "notears": {
+    "edges_0.3": 30,
+    "shd": 0,
+    "tpr": 1.0,
+    "fdr": 0.0,
+    "secs": 4.6
+   },
+   "cagate_c_base": {
+    "edges_0.3": 30,
+    "shd": 0,
+    "tpr": 1.0,
+    "fdr": 0.0,
+    "h": 2.9103404131092248e-09,
+    "secs": 10.1
+   },
+   "cagate_c_gate": {
+    "edges_0.3": 29,
+    "shd": 1,
+    "tpr": 0.9667,
+    "fdr": 0.0,
+    "h": 4.083325677584071e-09,
+    "secs": 9.2
+   },
+   "delta_edges": -1
+  }
+ ],
+ "means": {
+  "n": 316.93939393939394,
+  "notears": 63.666666666666664,
+  "base": 60.63636363636363,
+  "gate": 50.303030303030305,
+  "s_base": 26.288181818181823,
+  "s_gate": 29.850909090909095,
+  "s_notears": 25.417878787878784,
+  "s_rand": 1.8815151515151514
+ }
+}

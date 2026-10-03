@@ -1,0 +1,23 @@
+# Conda specification of the environment used for the manuscript's experiments.
+#
+#   conda env create -f environment.yml
+#   conda activate cagate
+#
+# The experiments reported in the paper ran on Python 3.12 with PyTorch
+# 2.11+cu128 on a single consumer GPU (8 GB).  Figure regeneration
+# (`python run_all.py`) needs only numpy, scipy and matplotlib.
+name: cagate
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy>=1.26
+  - scipy>=1.11
+  - matplotlib>=3.8
+  - networkx>=3.2
+  - scikit-learn>=1.4
+  - pandas>=2.1
+  - pip
+  - pip:
+      - torch>=2.11
+      - SciencePlots>=2.1
