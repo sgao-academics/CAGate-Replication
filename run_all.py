@@ -12,7 +12,8 @@ Output:
     figures/                 Fig1_Mechanism.pdf, Fig2_Pancancer.pdf,
                              Fig3_Validation.pdf, Fig4_Consensus.pdf
     figures_supplementary/   FigS1_HighDim.pdf, FigS2_Alpha.pdf,
-                             FigS3_Panel.pdf, FigS4_Modules.pdf
+                             FigS3_Panel.pdf, FigS4_Modules.pdf,
+                             FigS5_Boundary.pdf
 
 Every generator is a self-contained matplotlib script that reads only from
 ``data/`` and writes only into the two figure directories, so a fresh clone
@@ -20,6 +21,11 @@ reproduces the published figures exactly.  The two style helpers (``figstyle``,
 ``palette``) and the corrected solver (``cagate``) are imported from this root.
 """
 import os, subprocess, sys, time
+
+try:            # a GBK console (zh-CN Windows) must not choke on progress lines
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,6 +39,7 @@ STEPS = [
     ('_figS2_gen.py', 'figures_supplementary/FigS2_Alpha.pdf'),
     ('_figS3_gen.py', 'figures_supplementary/FigS3_Panel.pdf'),
     ('_figS4_gen.py', 'figures_supplementary/FigS4_Modules.pdf'),
+    ('_figS5_gen.py', 'figures_supplementary/FigS5_Boundary.pdf'),
 ]
 
 
@@ -42,8 +49,9 @@ def run(script, expected):
         print('  MISSING  %s' % script)
         return False
     t0 = time.time()
+    env = dict(os.environ, PYTHONIOENCODING='utf-8')
     r = subprocess.run([sys.executable, path], cwd=HERE, capture_output=True,
-                       text=True, encoding='utf-8', errors='replace')
+                       text=True, encoding='utf-8', errors='replace', env=env)
     dt = time.time() - t0
     for line in (r.stdout or '').strip().split('\n'):
         if line.strip():
