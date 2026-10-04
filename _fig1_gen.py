@@ -132,6 +132,7 @@ panel_letters(fig, [(A, 'a'), (B, 'b'), (C, 'c')])
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'figures', 'Fig1_Mechanism')
+os.makedirs(os.path.dirname(OUT), exist_ok=True)   # a fresh clone has no figures/ yet
 fig.savefig(OUT + '.pdf')
 fig.savefig(OUT + '.png', dpi=400)
 print('wrote', OUT + '.pdf')

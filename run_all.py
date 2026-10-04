@@ -49,7 +49,8 @@ def run(script, expected):
         print('  MISSING  %s' % script)
         return False
     t0 = time.time()
-    env = dict(os.environ, PYTHONIOENCODING='utf-8')
+    env = dict(os.environ, PYTHONIOENCODING='utf-8',
+               SOURCE_DATE_EPOCH=os.environ.get('SOURCE_DATE_EPOCH', '1704067200'))
     r = subprocess.run([sys.executable, path], cwd=HERE, capture_output=True,
                        text=True, encoding='utf-8', errors='replace', env=env)
     dt = time.time() - t0

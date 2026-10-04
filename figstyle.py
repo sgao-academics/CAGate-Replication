@@ -17,6 +17,15 @@ Typical use::
 
 Put this folder on ``sys.path`` first (``sys.path.insert(0, '.../00_核心规范')``).
 """
+import os as _os
+
+# Byte-reproducible figures.  matplotlib stamps every PDF with a creation date, so
+# two runs a second apart produce different bytes and the published files cannot be
+# verified with a checksum.  Pinning the stamp through the standard SOURCE_DATE_EPOCH
+# mechanism -- before any figure is saved -- makes a fresh clone reproduce the
+# published PDFs byte for byte.
+_os.environ.setdefault("SOURCE_DATE_EPOCH", "1704067200")   # 2024-01-01T00:00:00Z
+
 import matplotlib
 
 matplotlib.use("Agg")
