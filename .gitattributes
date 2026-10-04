@@ -1,0 +1,4 @@
+# Normalise line endings so that the reproducibility check is platform-independent:
+# every text file is stored and checked out with LF, on every operating system, so the
+# SHA256SUMS hashes match on Windows, macOS and Linux alike.
+* text=auto eol=lf
