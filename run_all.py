@@ -2,17 +2,22 @@
 CAGate replication -- one-click runner
 ======================================
 Regenerates every figure of the manuscript from the pre-computed results in
-``data/``.  No GPU, no network, no TCGA download: about 20 seconds on a laptop.
+``data/``.  No GPU, no network, no TCGA download: about half a minute on a
+laptop.
 
 Usage:
     python run_all.py
 
 Output:
-    figures/                 Fig1_Mechanism.pdf, Fig2_Pancancer.pdf, Fig3_Validation.pdf
-    figures_supplementary/   FigS1_Supplementary.pdf, FigS3_HighDim.pdf
+    figures/                 Fig1_Mechanism.pdf, Fig2_Pancancer.pdf,
+                             Fig3_Validation.pdf, Fig4_Consensus.pdf
+    figures_supplementary/   FigS1_HighDim.pdf, FigS2_Alpha.pdf,
+                             FigS3_Panel.pdf, FigS4_Modules.pdf
 
-Figure 1 is a TikZ diagram; if ``pdflatex`` is absent the pre-built
-``Fig1_Mechanism_prebuilt.pdf`` is copied instead and the run still succeeds.
+Every generator is a self-contained matplotlib script that reads only from
+``data/`` and writes only into the two figure directories, so a fresh clone
+reproduces the published figures exactly.  The two style helpers (``figstyle``,
+``palette``) and the corrected solver (``cagate``) are imported from this root.
 """
 import os, subprocess, sys, time
 
@@ -20,11 +25,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 # (script, output produced)
 STEPS = [
-    ('gen_fig1_mechanism.py', 'figures/Fig1_Mechanism.pdf'),
-    ('gen_fig2_precision.py', 'figures/Fig2_Pancancer.pdf'),
-    ('gen_fig3_scope.py',     'figures/Fig3_Validation.pdf'),
-    ('gen_figs1_prior.py',    'figures_supplementary/FigS1_Supplementary.pdf'),
-    ('gen_figs2_highdim.py',  'figures_supplementary/FigS3_HighDim.pdf'),
+    ('_fig1_gen.py',  'figures/Fig1_Mechanism.pdf'),
+    ('_fig2_gen.py',  'figures/Fig2_Pancancer.pdf'),
+    ('_fig3_gen.py',  'figures/Fig3_Validation.pdf'),
+    ('_fig4_gen.py',  'figures/Fig4_Consensus.pdf'),
+    ('_figS1_gen.py', 'figures_supplementary/FigS1_HighDim.pdf'),
+    ('_figS2_gen.py', 'figures_supplementary/FigS2_Alpha.pdf'),
+    ('_figS3_gen.py', 'figures_supplementary/FigS3_Panel.pdf'),
+    ('_figS4_gen.py', 'figures_supplementary/FigS4_Modules.pdf'),
 ]
 
 

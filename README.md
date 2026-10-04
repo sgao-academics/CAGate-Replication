@@ -25,8 +25,8 @@ python run_all.py
 ```
 
 `run_all.py` regenerates every figure from the pre-computed results in `data/` —
-no GPU, no network, no TCGA download, about 20 seconds. Output goes to
-`figures/` (Fig. 1–3) and `figures_supplementary/` (Fig. S1–S2).
+no GPU, no network, no TCGA download, under a minute. Output goes to
+`figures/` (Fig. 1–4) and `figures_supplementary/` (Fig. S1–S4).
 
 ## Layout
 
@@ -35,20 +35,22 @@ no GPU, no network, no TCGA download, about 20 seconds. Output goes to
 | `run_all.py` | One-click regeneration of every figure |
 | `cagate.py` | The CAGate solver: doubled-variable L-BFGS-B with an augmented Lagrangian and a residual-contrast cluster gate |
 | `notears_linear.py`, `notears_utils.py` | The NOTEARS baseline, run to convergence, used throughout |
-| `gen_fig1_mechanism.py` | Figure 1 — mechanism diagram (TikZ, with a pre-built fallback) |
-| `gen_fig2_precision.py` | Figure 2 — edge precision across 33 TCGA cancers |
-| `gen_fig3_scope.py` | Figure 3 — mechanism and scope |
-| `gen_figs1_prior.py` | Supplementary Figure S1 — prior comparison (TCGA-BRCA, *d* = 300) |
-| `gen_figs2_highdim.py` | Supplementary Figure S2 — high-dimensional analysis |
-| `_prior_experiment.py` | The experiment behind Supplementary Figure S1 |
+| `_fig1_gen.py` | Figure 1 — mechanism: residual dispersion → gate → cluster weights |
+| `_fig2_gen.py` | Figure 2 — edge precision across 33 TCGA cancers |
+| `_fig3_gen.py` | Figure 3 — mechanism and scope |
+| `_fig4_gen.py` | Figure 4 — cross-cancer consensus: the support ladder, sign stability, the multi-source forest, and the degree × strength control |
+| `_figS1_gen.py` | Supplementary Figure S1 — high-dimensional behaviour |
+| `_figS2_gen.py` | Supplementary Figure S2 — behaviour and robustness of the gate |
+| `_figS3_gen.py` | Supplementary Figure S3 — what each gene panel can measure, and what it can be tested against |
+| `_figS4_gen.py` | Supplementary Figure S4 — what the consensus edges are made of |
+| `figstyle.py`, `palette.py` | Figure-style helpers (shared with the manuscript's other figures) |
 | `download_tcga.py` | TCGA RNA-Seq download (UCSC Xena) |
 | `data/` | Pre-computed results that every figure is drawn from |
 | `environment.yml` | Conda specification of the experimental environment |
 | `SHA256SUMS.txt` | SHA-256 manifest of this package |
 
-The file `figures_supplementary/FigS3_HighDim.pdf` is Supplementary Figure
-**S2** of the manuscript; it keeps the name used by the manuscript's
-`\includegraphics`.
+Every generator writes the exact file names the manuscript's `\includegraphics`
+expects, so `run_all.py` reproduces the published figures with no renaming step.
 
 ## What the paper claims — and what it does not
 
@@ -78,14 +80,17 @@ implementation shipped here is the corrected one.
 
 | `data/` | Backs |
 |:--|:--|
-| `evidence.json` | Figures 2 and 3; the aggregate over the 33 cancers |
+| `evidence.json` | Figures 2 and 3, and Supplementary Figure S1(a) — the aggregate over the 33 cancers (external-support tests, cluster-heterogeneity runs, homogeneous ER sweep) |
 | `dirval_results.json` | Figure 2(d) and Supplementary Table S6 |
-| `real_dim/brca_d{50,100,150,200}.json` | Supplementary Figure S2(b) and Supplementary Table S3 |
-| `pan_cancer/*.json` | The 33 per-cancer runs behind Figure 2 and Supplementary Table S5 |
-| `tf_enriched/*.json` | The transcription-factor-enriched runs behind Figure 2(d) and Supplementary Table S6 |
-| `synthetic_dimension_sweep/*.json` | Supplementary Figure S2(a) and Supplementary Table S2 |
-| `cluster_sweep/*.json` | Figure 3(a) |
-| `prior_ckpt.json` | Supplementary Figure S1 |
+| `real_dim/brca_d{50,100,150,200}.json` | Supplementary Figure S1(b) and Supplementary Table S3 |
+| `synthetic_dimension_sweep/*.json` | Supplementary Table S2 — the raw ER sweep also carried in `evidence.json` |
+| `pan_cancer/*.json` | Supplementary Table S5 — the raw 33 per-cancer runs also carried in `evidence.json` |
+| `tf_enriched/*.json` | Figure 2(d) and Supplementary Table S6 |
+| `cluster_sweep/*.json`, `cluster_rf/*.json` | Figure 3(a) — paired cluster-heterogeneity runs |
+| `mega33_results/*.json` | Supplementary Figure S2(a) — the 33 per-cancer edge counts |
+| `alpha_sweep.json` | Supplementary Figure S2(b) and Supplementary Table S4 — the *α* sensitivity sweep |
+| `fig4_data.json` | Figure 4 — every panel |
+| `figS34_data.json` | Supplementary Figures S3 and S4 |
 
 TCGA RNA-Seq data are public and are not redistributed here;
 `download_tcga.py` fetches them from UCSC Xena. All experiments use fixed random
