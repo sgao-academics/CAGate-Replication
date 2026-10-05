@@ -1,0 +1,30 @@
+{
+  "cancer": "LUSC",
+  "n": 553,
+  "d": 100,
+  "k_gate": 60,
+  "ntrees": 1000,
+  "genie3_secs": 39.6,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 83.33,
+      "edges_evaluated": 60,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 45.0,
+      "edges_evaluated": 60,
+      "edges@0.3": 60
+    },
+    "base": {
+      "string_pct@k_gate": 45.0,
+      "edges_evaluated": 60,
+      "edges@0.3": 67
+    },
+    "notears": {
+      "string_pct@k_gate": 45.0,
+      "edges_evaluated": 60,
+      "edges@0.3": 68
+    }
+  }
+}

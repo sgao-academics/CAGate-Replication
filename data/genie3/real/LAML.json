@@ -1,0 +1,30 @@
+{
+  "cancer": "LAML",
+  "n": 173,
+  "d": 100,
+  "k_gate": 49,
+  "ntrees": 1000,
+  "genie3_secs": 14.9,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 71.43,
+      "edges_evaluated": 49,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 40.82,
+      "edges_evaluated": 49,
+      "edges@0.3": 49
+    },
+    "base": {
+      "string_pct@k_gate": 42.86,
+      "edges_evaluated": 49,
+      "edges@0.3": 69
+    },
+    "notears": {
+      "string_pct@k_gate": 44.9,
+      "edges_evaluated": 49,
+      "edges@0.3": 65
+    }
+  }
+}

@@ -1,0 +1,1124 @@
+[
+  {
+    "cancer": "ACC",
+    "k": 32,
+    "arms": {
+      "genie3": {
+        "obs": 81.25,
+        "null": 59.56,
+        "z": 5.01,
+        "n_genes": 12,
+        "max_outdeg": 5
+      },
+      "gate": {
+        "obs": 18.75,
+        "null": 3.61,
+        "z": 4.94,
+        "n_genes": 44,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 18.75,
+        "null": 3.17,
+        "z": 5.49,
+        "n_genes": 46,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 18.75,
+        "null": 3.74,
+        "z": 4.82,
+        "n_genes": 44,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "BLCA",
+    "k": 42,
+    "arms": {
+      "genie3": {
+        "obs": 78.57,
+        "null": 19.47,
+        "z": 11.56,
+        "n_genes": 28,
+        "max_outdeg": 5
+      },
+      "gate": {
+        "obs": 47.62,
+        "null": 5.62,
+        "z": 12.04,
+        "n_genes": 56,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 52.38,
+        "null": 4.15,
+        "z": 18.14,
+        "n_genes": 54,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 54.76,
+        "null": 4.93,
+        "z": 15.03,
+        "n_genes": 51,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "BRCA",
+    "k": 30,
+    "arms": {
+      "genie3": {
+        "obs": 50.0,
+        "null": 10.63,
+        "z": 8.29,
+        "n_genes": 20,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 36.67,
+        "null": 7.26,
+        "z": 7.12,
+        "n_genes": 36,
+        "max_outdeg": 4
+      },
+      "base": {
+        "obs": 36.67,
+        "null": 6.7,
+        "z": 7.09,
+        "n_genes": 35,
+        "max_outdeg": 5
+      },
+      "notears": {
+        "obs": 36.67,
+        "null": 6.53,
+        "z": 6.84,
+        "n_genes": 35,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "CESC",
+    "k": 40,
+    "arms": {
+      "genie3": {
+        "obs": 75.0,
+        "null": 11.12,
+        "z": 14.52,
+        "n_genes": 34,
+        "max_outdeg": 3
+      },
+      "gate": {
+        "obs": 47.5,
+        "null": 8.09,
+        "z": 9.96,
+        "n_genes": 50,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 47.5,
+        "null": 7.49,
+        "z": 10.73,
+        "n_genes": 48,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 47.5,
+        "null": 8.62,
+        "z": 9.78,
+        "n_genes": 48,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "CHOL",
+    "k": 80,
+    "arms": {
+      "genie3": {
+        "obs": 21.25,
+        "null": 4.04,
+        "z": 7.82,
+        "n_genes": 61,
+        "max_outdeg": 5
+      },
+      "gate": {
+        "obs": 20.0,
+        "null": 5.87,
+        "z": 5.79,
+        "n_genes": 87,
+        "max_outdeg": 4
+      },
+      "base": {
+        "obs": 20.0,
+        "null": 4.93,
+        "z": 6.46,
+        "n_genes": 87,
+        "max_outdeg": 4
+      },
+      "notears": {
+        "obs": 20.0,
+        "null": 6.41,
+        "z": 5.33,
+        "n_genes": 83,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "COAD",
+    "k": 56,
+    "arms": {
+      "genie3": {
+        "obs": 57.14,
+        "null": 17.6,
+        "z": 10.19,
+        "n_genes": 37,
+        "max_outdeg": 7
+      },
+      "gate": {
+        "obs": 32.14,
+        "null": 2.88,
+        "z": 12.77,
+        "n_genes": 64,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 37.5,
+        "null": 3.52,
+        "z": 14.41,
+        "n_genes": 64,
+        "max_outdeg": 4
+      },
+      "notears": {
+        "obs": 35.71,
+        "null": 3.77,
+        "z": 13.23,
+        "n_genes": 63,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "DLBC",
+    "k": 43,
+    "arms": {
+      "genie3": {
+        "obs": 39.53,
+        "null": 9.65,
+        "z": 8.73,
+        "n_genes": 36,
+        "max_outdeg": 3
+      },
+      "gate": {
+        "obs": 27.91,
+        "null": 4.56,
+        "z": 8.36,
+        "n_genes": 54,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 20.93,
+        "null": 3.99,
+        "z": 6.45,
+        "n_genes": 55,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 23.26,
+        "null": 4.36,
+        "z": 6.51,
+        "n_genes": 56,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "ESCA",
+    "k": 72,
+    "arms": {
+      "genie3": {
+        "obs": 38.89,
+        "null": 3.46,
+        "z": 17.53,
+        "n_genes": 59,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 34.72,
+        "null": 5.21,
+        "z": 11.69,
+        "n_genes": 78,
+        "max_outdeg": 6
+      },
+      "base": {
+        "obs": 27.78,
+        "null": 3.75,
+        "z": 10.86,
+        "n_genes": 80,
+        "max_outdeg": 4
+      },
+      "notears": {
+        "obs": 29.17,
+        "null": 3.72,
+        "z": 12.61,
+        "n_genes": 76,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "GBM",
+    "k": 53,
+    "arms": {
+      "genie3": {
+        "obs": 37.74,
+        "null": 5.06,
+        "z": 13.22,
+        "n_genes": 45,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 24.53,
+        "null": 3.43,
+        "z": 8.32,
+        "n_genes": 61,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 32.08,
+        "null": 5.03,
+        "z": 10.15,
+        "n_genes": 62,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 28.3,
+        "null": 4.76,
+        "z": 9.53,
+        "n_genes": 61,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "HNSC",
+    "k": 61,
+    "arms": {
+      "genie3": {
+        "obs": 68.85,
+        "null": 25.52,
+        "z": 9.64,
+        "n_genes": 28,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 42.62,
+        "null": 5.94,
+        "z": 13.39,
+        "n_genes": 73,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 47.54,
+        "null": 6.6,
+        "z": 14.2,
+        "n_genes": 71,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 39.34,
+        "null": 5.58,
+        "z": 12.73,
+        "n_genes": 71,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "KICH",
+    "k": 65,
+    "arms": {
+      "genie3": {
+        "obs": 52.31,
+        "null": 27.75,
+        "z": 6.56,
+        "n_genes": 36,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 18.46,
+        "null": 2.25,
+        "z": 9.13,
+        "n_genes": 73,
+        "max_outdeg": 6
+      },
+      "base": {
+        "obs": 18.46,
+        "null": 1.96,
+        "z": 10.3,
+        "n_genes": 74,
+        "max_outdeg": 5
+      },
+      "notears": {
+        "obs": 21.54,
+        "null": 2.16,
+        "z": 10.76,
+        "n_genes": 73,
+        "max_outdeg": 4
+      }
+    }
+  },
+  {
+    "cancer": "KIRC",
+    "k": 50,
+    "arms": {
+      "genie3": {
+        "obs": 82.0,
+        "null": 50.57,
+        "z": 7.27,
+        "n_genes": 16,
+        "max_outdeg": 7
+      },
+      "gate": {
+        "obs": 34.0,
+        "null": 4.32,
+        "z": 10.36,
+        "n_genes": 58,
+        "max_outdeg": 5
+      },
+      "base": {
+        "obs": 32.0,
+        "null": 3.37,
+        "z": 11.24,
+        "n_genes": 64,
+        "max_outdeg": 4
+      },
+      "notears": {
+        "obs": 32.0,
+        "null": 3.67,
+        "z": 11.86,
+        "n_genes": 59,
+        "max_outdeg": 4
+      }
+    }
+  },
+  {
+    "cancer": "KIRP",
+    "k": 48,
+    "arms": {
+      "genie3": {
+        "obs": 52.08,
+        "null": 9.67,
+        "z": 11.66,
+        "n_genes": 37,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 25.0,
+        "null": 2.81,
+        "z": 9.67,
+        "n_genes": 62,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 29.17,
+        "null": 3.12,
+        "z": 10.48,
+        "n_genes": 63,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 27.08,
+        "null": 2.94,
+        "z": 10.54,
+        "n_genes": 60,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "LAML",
+    "k": 49,
+    "arms": {
+      "genie3": {
+        "obs": 71.43,
+        "null": 14.99,
+        "z": 12.44,
+        "n_genes": 36,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 40.82,
+        "null": 4.92,
+        "z": 12.87,
+        "n_genes": 56,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 42.86,
+        "null": 4.8,
+        "z": 12.96,
+        "n_genes": 59,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 44.9,
+        "null": 5.96,
+        "z": 11.69,
+        "n_genes": 59,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "LGG",
+    "k": 57,
+    "arms": {
+      "genie3": {
+        "obs": 47.37,
+        "null": 16.5,
+        "z": 7.32,
+        "n_genes": 42,
+        "max_outdeg": 7
+      },
+      "gate": {
+        "obs": 21.05,
+        "null": 4.88,
+        "z": 6.74,
+        "n_genes": 67,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 19.3,
+        "null": 4.14,
+        "z": 6.53,
+        "n_genes": 67,
+        "max_outdeg": 4
+      },
+      "notears": {
+        "obs": 19.3,
+        "null": 4.18,
+        "z": 6.59,
+        "n_genes": 65,
+        "max_outdeg": 4
+      }
+    }
+  },
+  {
+    "cancer": "LIHC",
+    "k": 40,
+    "arms": {
+      "genie3": {
+        "obs": 75.0,
+        "null": 24.25,
+        "z": 10.44,
+        "n_genes": 26,
+        "max_outdeg": 5
+      },
+      "gate": {
+        "obs": 35.0,
+        "null": 2.71,
+        "z": 13.48,
+        "n_genes": 56,
+        "max_outdeg": 2
+      },
+      "base": {
+        "obs": 35.0,
+        "null": 2.73,
+        "z": 12.7,
+        "n_genes": 55,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 37.5,
+        "null": 2.75,
+        "z": 13.71,
+        "n_genes": 59,
+        "max_outdeg": 2
+      }
+    }
+  },
+  {
+    "cancer": "LUAD",
+    "k": 41,
+    "arms": {
+      "genie3": {
+        "obs": 58.54,
+        "null": 9.73,
+        "z": 11.21,
+        "n_genes": 31,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 36.59,
+        "null": 5.32,
+        "z": 9.7,
+        "n_genes": 52,
+        "max_outdeg": 2
+      },
+      "base": {
+        "obs": 36.59,
+        "null": 4.66,
+        "z": 10.53,
+        "n_genes": 51,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 34.15,
+        "null": 4.45,
+        "z": 9.87,
+        "n_genes": 52,
+        "max_outdeg": 2
+      }
+    }
+  },
+  {
+    "cancer": "LUSC",
+    "k": 60,
+    "arms": {
+      "genie3": {
+        "obs": 81.67,
+        "null": 28.43,
+        "z": 11.73,
+        "n_genes": 28,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 45.0,
+        "null": 6.18,
+        "z": 12.63,
+        "n_genes": 71,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 45.0,
+        "null": 5.08,
+        "z": 14.04,
+        "n_genes": 73,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 45.0,
+        "null": 5.1,
+        "z": 13.79,
+        "n_genes": 71,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "MESO",
+    "k": 25,
+    "arms": {
+      "genie3": {
+        "obs": 100.0,
+        "null": 31.74,
+        "z": 7.34,
+        "n_genes": 14,
+        "max_outdeg": 3
+      },
+      "gate": {
+        "obs": 44.0,
+        "null": 6.08,
+        "z": 8.57,
+        "n_genes": 36,
+        "max_outdeg": 2
+      },
+      "base": {
+        "obs": 48.0,
+        "null": 7.17,
+        "z": 8.46,
+        "n_genes": 36,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 44.0,
+        "null": 5.54,
+        "z": 8.99,
+        "n_genes": 40,
+        "max_outdeg": 2
+      }
+    }
+  },
+  {
+    "cancer": "OV",
+    "k": 24,
+    "arms": {
+      "genie3": {
+        "obs": 25.0,
+        "null": 2.26,
+        "z": 7.0,
+        "n_genes": 22,
+        "max_outdeg": 2
+      },
+      "gate": {
+        "obs": 12.5,
+        "null": 1.78,
+        "z": 3.91,
+        "n_genes": 35,
+        "max_outdeg": 2
+      },
+      "base": {
+        "obs": 8.33,
+        "null": 1.8,
+        "z": 2.38,
+        "n_genes": 36,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 8.33,
+        "null": 1.71,
+        "z": 2.61,
+        "n_genes": 35,
+        "max_outdeg": 2
+      }
+    }
+  },
+  {
+    "cancer": "PAAD",
+    "k": 67,
+    "arms": {
+      "genie3": {
+        "obs": 49.25,
+        "null": 14.18,
+        "z": 9.81,
+        "n_genes": 38,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 34.33,
+        "null": 6.04,
+        "z": 10.7,
+        "n_genes": 72,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 31.34,
+        "null": 5.24,
+        "z": 10.16,
+        "n_genes": 75,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 37.31,
+        "null": 5.67,
+        "z": 11.89,
+        "n_genes": 72,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "PCPG",
+    "k": 46,
+    "arms": {
+      "genie3": {
+        "obs": 43.48,
+        "null": 18.94,
+        "z": 5.56,
+        "n_genes": 30,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 21.74,
+        "null": 6.47,
+        "z": 4.47,
+        "n_genes": 51,
+        "max_outdeg": 5
+      },
+      "base": {
+        "obs": 19.57,
+        "null": 4.99,
+        "z": 5.2,
+        "n_genes": 52,
+        "max_outdeg": 6
+      },
+      "notears": {
+        "obs": 21.74,
+        "null": 5.88,
+        "z": 5.19,
+        "n_genes": 51,
+        "max_outdeg": 4
+      }
+    }
+  },
+  {
+    "cancer": "PRAD",
+    "k": 40,
+    "arms": {
+      "genie3": {
+        "obs": 67.5,
+        "null": 24.84,
+        "z": 8.37,
+        "n_genes": 29,
+        "max_outdeg": 5
+      },
+      "gate": {
+        "obs": 35.0,
+        "null": 7.74,
+        "z": 7.32,
+        "n_genes": 46,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 32.5,
+        "null": 7.46,
+        "z": 6.2,
+        "n_genes": 48,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 37.5,
+        "null": 8.7,
+        "z": 7.47,
+        "n_genes": 48,
+        "max_outdeg": 2
+      }
+    }
+  },
+  {
+    "cancer": "READ",
+    "k": 54,
+    "arms": {
+      "genie3": {
+        "obs": 61.11,
+        "null": 13.71,
+        "z": 11.76,
+        "n_genes": 32,
+        "max_outdeg": 5
+      },
+      "gate": {
+        "obs": 27.78,
+        "null": 3.09,
+        "z": 11.36,
+        "n_genes": 64,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 29.63,
+        "null": 2.65,
+        "z": 13.33,
+        "n_genes": 64,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 27.78,
+        "null": 3.34,
+        "z": 11.37,
+        "n_genes": 63,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "SARC",
+    "k": 47,
+    "arms": {
+      "genie3": {
+        "obs": 80.85,
+        "null": 47.03,
+        "z": 7.68,
+        "n_genes": 24,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 36.17,
+        "null": 6.75,
+        "z": 8.76,
+        "n_genes": 53,
+        "max_outdeg": 4
+      },
+      "base": {
+        "obs": 34.04,
+        "null": 7.47,
+        "z": 7.79,
+        "n_genes": 56,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 34.04,
+        "null": 6.54,
+        "z": 8.17,
+        "n_genes": 53,
+        "max_outdeg": 4
+      }
+    }
+  },
+  {
+    "cancer": "SKCM",
+    "k": 50,
+    "arms": {
+      "genie3": {
+        "obs": 74.0,
+        "null": 32.64,
+        "z": 8.61,
+        "n_genes": 25,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 46.0,
+        "null": 6.31,
+        "z": 11.27,
+        "n_genes": 61,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 50.0,
+        "null": 6.82,
+        "z": 13.15,
+        "n_genes": 63,
+        "max_outdeg": 2
+      },
+      "notears": {
+        "obs": 44.0,
+        "null": 5.73,
+        "z": 11.08,
+        "n_genes": 62,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "STAD",
+    "k": 51,
+    "arms": {
+      "genie3": {
+        "obs": 86.27,
+        "null": 26.7,
+        "z": 13.9,
+        "n_genes": 26,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 45.1,
+        "null": 4.06,
+        "z": 14.95,
+        "n_genes": 64,
+        "max_outdeg": 5
+      },
+      "base": {
+        "obs": 43.14,
+        "null": 3.77,
+        "z": 15.97,
+        "n_genes": 64,
+        "max_outdeg": 5
+      },
+      "notears": {
+        "obs": 43.14,
+        "null": 3.34,
+        "z": 15.48,
+        "n_genes": 65,
+        "max_outdeg": 4
+      }
+    }
+  },
+  {
+    "cancer": "TGCT",
+    "k": 71,
+    "arms": {
+      "genie3": {
+        "obs": 28.17,
+        "null": 4.99,
+        "z": 10.25,
+        "n_genes": 61,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 16.9,
+        "null": 3.39,
+        "z": 6.98,
+        "n_genes": 81,
+        "max_outdeg": 4
+      },
+      "base": {
+        "obs": 22.54,
+        "null": 4.12,
+        "z": 8.45,
+        "n_genes": 76,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 19.72,
+        "null": 3.35,
+        "z": 8.57,
+        "n_genes": 76,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "THCA",
+    "k": 62,
+    "arms": {
+      "genie3": {
+        "obs": 17.74,
+        "null": 8.07,
+        "z": 3.39,
+        "n_genes": 29,
+        "max_outdeg": 7
+      },
+      "gate": {
+        "obs": 12.9,
+        "null": 1.8,
+        "z": 6.93,
+        "n_genes": 66,
+        "max_outdeg": 4
+      },
+      "base": {
+        "obs": 12.9,
+        "null": 1.79,
+        "z": 7.18,
+        "n_genes": 68,
+        "max_outdeg": 4
+      },
+      "notears": {
+        "obs": 12.9,
+        "null": 1.77,
+        "z": 7.61,
+        "n_genes": 71,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "THYM",
+    "k": 64,
+    "arms": {
+      "genie3": {
+        "obs": 28.12,
+        "null": 4.9,
+        "z": 8.9,
+        "n_genes": 47,
+        "max_outdeg": 6
+      },
+      "gate": {
+        "obs": 17.19,
+        "null": 2.03,
+        "z": 10.05,
+        "n_genes": 72,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 15.62,
+        "null": 2.25,
+        "z": 7.44,
+        "n_genes": 75,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 15.62,
+        "null": 2.42,
+        "z": 7.36,
+        "n_genes": 72,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "UCEC",
+    "k": 37,
+    "arms": {
+      "genie3": {
+        "obs": 13.51,
+        "null": 1.48,
+        "z": 6.09,
+        "n_genes": 35,
+        "max_outdeg": 3
+      },
+      "gate": {
+        "obs": 8.11,
+        "null": 1.25,
+        "z": 3.6,
+        "n_genes": 46,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 8.11,
+        "null": 1.05,
+        "z": 4.35,
+        "n_genes": 45,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 8.11,
+        "null": 0.98,
+        "z": 4.51,
+        "n_genes": 46,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "UCS",
+    "k": 50,
+    "arms": {
+      "genie3": {
+        "obs": 14.0,
+        "null": 1.68,
+        "z": 7.12,
+        "n_genes": 42,
+        "max_outdeg": 4
+      },
+      "gate": {
+        "obs": 22.0,
+        "null": 3.87,
+        "z": 6.78,
+        "n_genes": 59,
+        "max_outdeg": 4
+      },
+      "base": {
+        "obs": 12.0,
+        "null": 2.2,
+        "z": 5.0,
+        "n_genes": 65,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 14.0,
+        "null": 2.42,
+        "z": 5.49,
+        "n_genes": 67,
+        "max_outdeg": 3
+      }
+    }
+  },
+  {
+    "cancer": "UVM",
+    "k": 53,
+    "arms": {
+      "genie3": {
+        "obs": 37.74,
+        "null": 12.52,
+        "z": 7.04,
+        "n_genes": 36,
+        "max_outdeg": 7
+      },
+      "gate": {
+        "obs": 16.98,
+        "null": 2.4,
+        "z": 7.78,
+        "n_genes": 66,
+        "max_outdeg": 3
+      },
+      "base": {
+        "obs": 18.87,
+        "null": 3.41,
+        "z": 6.32,
+        "n_genes": 64,
+        "max_outdeg": 3
+      },
+      "notears": {
+        "obs": 18.87,
+        "null": 2.78,
+        "z": 7.69,
+        "n_genes": 67,
+        "max_outdeg": 3
+      }
+    }
+  }
+]

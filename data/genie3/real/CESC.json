@@ -1,0 +1,30 @@
+{
+  "cancer": "CESC",
+  "n": 308,
+  "d": 100,
+  "k_gate": 40,
+  "ntrees": 1000,
+  "genie3_secs": 21.0,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 77.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 47.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 40
+    },
+    "base": {
+      "string_pct@k_gate": 47.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 48
+    },
+    "notears": {
+      "string_pct@k_gate": 47.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 51
+    }
+  }
+}

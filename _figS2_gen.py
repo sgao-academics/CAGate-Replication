@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Figure S3 -- behaviour and robustness of the residual-contrast gate.
+"""Figure S2 -- behaviour and robustness of the residual-contrast gate.
 
 Figure 2 answers "is the gate's improvement real?"  Figure 3 answers "where does
 it act?"  This figure answers the two questions left over: does the gate shrink

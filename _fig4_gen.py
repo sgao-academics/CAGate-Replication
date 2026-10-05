@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Figure 4 -- consensus across cancer types, drawn in the house style
-(作图心得与模板/00_核心规范).
+(house style).
 
 Figure 4 carries the *cross-environment* half of the argument: an edge that
 recurs in more cancer types is far more likely to be an edge that an

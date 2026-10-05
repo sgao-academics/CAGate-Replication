@@ -1,0 +1,30 @@
+{
+  "cancer": "STAD",
+  "n": 450,
+  "d": 100,
+  "k_gate": 51,
+  "ntrees": 1000,
+  "genie3_secs": 28.3,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 88.24,
+      "edges_evaluated": 51,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 45.1,
+      "edges_evaluated": 51,
+      "edges@0.3": 51
+    },
+    "base": {
+      "string_pct@k_gate": 43.14,
+      "edges_evaluated": 51,
+      "edges@0.3": 59
+    },
+    "notears": {
+      "string_pct@k_gate": 43.14,
+      "edges_evaluated": 51,
+      "edges@0.3": 65
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "cancer": "LUAD",
+  "n": 576,
+  "d": 100,
+  "k_gate": 41,
+  "ntrees": 1000,
+  "genie3_secs": 32.8,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 53.66,
+      "edges_evaluated": 41,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 36.59,
+      "edges_evaluated": 41,
+      "edges@0.3": 41
+    },
+    "base": {
+      "string_pct@k_gate": 36.59,
+      "edges_evaluated": 41,
+      "edges@0.3": 50
+    },
+    "notears": {
+      "string_pct@k_gate": 34.15,
+      "edges_evaluated": 41,
+      "edges@0.3": 50
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "cancer": "HNSC",
+  "n": 566,
+  "d": 100,
+  "k_gate": 61,
+  "ntrees": 1000,
+  "genie3_secs": 31.5,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 65.57,
+      "edges_evaluated": 61,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 42.62,
+      "edges_evaluated": 61,
+      "edges@0.3": 61
+    },
+    "base": {
+      "string_pct@k_gate": 47.54,
+      "edges_evaluated": 61,
+      "edges@0.3": 69
+    },
+    "notears": {
+      "string_pct@k_gate": 39.34,
+      "edges_evaluated": 61,
+      "edges@0.3": 78
+    }
+  }
+}

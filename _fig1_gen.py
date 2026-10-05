@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Figure 1, drawn in the house style (作图心得与模板/00_核心规范).
+"""Figure 1, drawn in the house style (house style).
 
 Canvas width is the manuscript's own text block, 127.3 mm (361 pt, measured from
 ws-jbcb), not the library's 174 mm: Fig. 1 is placed at \\textwidth, so drawing at

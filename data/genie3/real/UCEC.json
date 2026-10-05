@@ -1,0 +1,30 @@
+{
+  "cancer": "UCEC",
+  "n": 201,
+  "d": 100,
+  "k_gate": 37,
+  "ntrees": 1000,
+  "genie3_secs": 16.4,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 13.51,
+      "edges_evaluated": 37,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 8.11,
+      "edges_evaluated": 37,
+      "edges@0.3": 37
+    },
+    "base": {
+      "string_pct@k_gate": 8.11,
+      "edges_evaluated": 37,
+      "edges@0.3": 49
+    },
+    "notears": {
+      "string_pct@k_gate": 8.11,
+      "edges_evaluated": 37,
+      "edges@0.3": 45
+    }
+  }
+}

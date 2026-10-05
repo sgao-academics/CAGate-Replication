@@ -15,7 +15,7 @@ Typical use::
     from figstyle import (W, MM, PAL, INK, BOXFC, BOXEC, tidy, card, dots,
                           capsule, haloed_text, panel_letters)
 
-Put this folder on ``sys.path`` first (``sys.path.insert(0, '.../00_核心规范')``).
+Put this folder on ``sys.path`` first (``sys.path.insert(0, '<folder holding figstyle.py>')``).
 """
 import os as _os
 

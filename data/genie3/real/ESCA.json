@@ -1,0 +1,30 @@
+{
+  "cancer": "ESCA",
+  "n": 196,
+  "d": 100,
+  "k_gate": 72,
+  "ntrees": 1000,
+  "genie3_secs": 15.9,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 37.5,
+      "edges_evaluated": 72,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 34.72,
+      "edges_evaluated": 72,
+      "edges@0.3": 72
+    },
+    "base": {
+      "string_pct@k_gate": 27.78,
+      "edges_evaluated": 72,
+      "edges@0.3": 77
+    },
+    "notears": {
+      "string_pct@k_gate": 29.17,
+      "edges_evaluated": 72,
+      "edges@0.3": 80
+    }
+  }
+}

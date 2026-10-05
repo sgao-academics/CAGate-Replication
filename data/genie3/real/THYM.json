@@ -1,0 +1,30 @@
+{
+  "cancer": "THYM",
+  "n": 122,
+  "d": 100,
+  "k_gate": 64,
+  "ntrees": 1000,
+  "genie3_secs": 13.2,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 26.56,
+      "edges_evaluated": 64,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 17.19,
+      "edges_evaluated": 64,
+      "edges@0.3": 64
+    },
+    "base": {
+      "string_pct@k_gate": 15.62,
+      "edges_evaluated": 64,
+      "edges@0.3": 74
+    },
+    "notears": {
+      "string_pct@k_gate": 15.62,
+      "edges_evaluated": 64,
+      "edges@0.3": 78
+    }
+  }
+}

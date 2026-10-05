@@ -1,0 +1,30 @@
+{
+  "cancer": "GBM",
+  "n": 172,
+  "d": 100,
+  "k_gate": 53,
+  "ntrees": 1000,
+  "genie3_secs": 15.4,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 37.74,
+      "edges_evaluated": 53,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 24.53,
+      "edges_evaluated": 53,
+      "edges@0.3": 53
+    },
+    "base": {
+      "string_pct@k_gate": 32.08,
+      "edges_evaluated": 53,
+      "edges@0.3": 70
+    },
+    "notears": {
+      "string_pct@k_gate": 28.3,
+      "edges_evaluated": 53,
+      "edges@0.3": 74
+    }
+  }
+}

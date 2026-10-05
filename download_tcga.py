@@ -4,7 +4,7 @@ TCGA-BRCA Data Download and Preprocessing
 Downloads TCGA BRCA RNA-Seq from UCSC Xena, builds TF-target prior,
 prepares data for CDSM GenomicCausalDAG pipeline.
 
-Author: 无种者联盟 · 千策 (副Agent·癌症应用线)
+Author: Shuaidong Gao
 Date: 2026-05-22
 """
 import urllib.request
@@ -18,6 +18,7 @@ from typing import Dict, Tuple
 # Config
 # ═══════════════════════════════════════════════════════════════
 
+PKG_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(PKG_ROOT, 'data')
 CANCER_TYPE = 'BRCA'  # Breast invasive carcinoma
 N_TOP_GENES = 500      # Top variable genes to keep

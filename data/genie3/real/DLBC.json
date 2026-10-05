@@ -1,0 +1,30 @@
+{
+  "cancer": "DLBC",
+  "n": 48,
+  "d": 100,
+  "k_gate": 43,
+  "ntrees": 1000,
+  "genie3_secs": 10.7,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 37.21,
+      "edges_evaluated": 43,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 27.91,
+      "edges_evaluated": 43,
+      "edges@0.3": 43
+    },
+    "base": {
+      "string_pct@k_gate": 20.93,
+      "edges_evaluated": 43,
+      "edges@0.3": 67
+    },
+    "notears": {
+      "string_pct@k_gate": 23.26,
+      "edges_evaluated": 43,
+      "edges@0.3": 76
+    }
+  }
+}

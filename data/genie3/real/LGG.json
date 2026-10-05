@@ -1,0 +1,30 @@
+{
+  "cancer": "LGG",
+  "n": 530,
+  "d": 100,
+  "k_gate": 57,
+  "ntrees": 1000,
+  "genie3_secs": 31.4,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 49.12,
+      "edges_evaluated": 57,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 21.05,
+      "edges_evaluated": 57,
+      "edges@0.3": 57
+    },
+    "base": {
+      "string_pct@k_gate": 19.3,
+      "edges_evaluated": 57,
+      "edges@0.3": 66
+    },
+    "notears": {
+      "string_pct@k_gate": 19.3,
+      "edges_evaluated": 57,
+      "edges@0.3": 67
+    }
+  }
+}

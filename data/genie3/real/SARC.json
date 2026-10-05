@@ -1,0 +1,30 @@
+{
+  "cancer": "SARC",
+  "n": 265,
+  "d": 100,
+  "k_gate": 47,
+  "ntrees": 1000,
+  "genie3_secs": 25.3,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 87.23,
+      "edges_evaluated": 47,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 36.17,
+      "edges_evaluated": 47,
+      "edges@0.3": 47
+    },
+    "base": {
+      "string_pct@k_gate": 34.04,
+      "edges_evaluated": 47,
+      "edges@0.3": 55
+    },
+    "notears": {
+      "string_pct@k_gate": 34.04,
+      "edges_evaluated": 47,
+      "edges@0.3": 57
+    }
+  }
+}

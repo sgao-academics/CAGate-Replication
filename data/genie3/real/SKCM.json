@@ -1,0 +1,30 @@
+{
+  "cancer": "SKCM",
+  "n": 474,
+  "d": 100,
+  "k_gate": 50,
+  "ntrees": 1000,
+  "genie3_secs": 34.7,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 74.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 46.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 50
+    },
+    "base": {
+      "string_pct@k_gate": 50.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 53
+    },
+    "notears": {
+      "string_pct@k_gate": 44.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 59
+    }
+  }
+}

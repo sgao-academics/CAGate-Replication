@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Figure 3, drawn in the house style (作图心得与模板/00_核心规范).
+"""Figure 3, drawn in the house style (house style).
 
 Figure 3 carries the *mechanism and its operating regime*, after the
 volume/precision evidence moved to Figure 2:

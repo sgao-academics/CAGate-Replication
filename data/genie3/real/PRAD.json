@@ -1,0 +1,30 @@
+{
+  "cancer": "PRAD",
+  "n": 550,
+  "d": 100,
+  "k_gate": 40,
+  "ntrees": 1000,
+  "genie3_secs": 39.5,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 62.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 35.0,
+      "edges_evaluated": 40,
+      "edges@0.3": 40
+    },
+    "base": {
+      "string_pct@k_gate": 32.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 50
+    },
+    "notears": {
+      "string_pct@k_gate": 37.5,
+      "edges_evaluated": 40,
+      "edges@0.3": 51
+    }
+  }
+}

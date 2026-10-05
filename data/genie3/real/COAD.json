@@ -1,0 +1,30 @@
+{
+  "cancer": "COAD",
+  "n": 329,
+  "d": 100,
+  "k_gate": 56,
+  "ntrees": 1000,
+  "genie3_secs": 21.7,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 58.93,
+      "edges_evaluated": 56,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 32.14,
+      "edges_evaluated": 56,
+      "edges@0.3": 56
+    },
+    "base": {
+      "string_pct@k_gate": 37.5,
+      "edges_evaluated": 56,
+      "edges@0.3": 69
+    },
+    "notears": {
+      "string_pct@k_gate": 35.71,
+      "edges_evaluated": 56,
+      "edges@0.3": 69
+    }
+  }
+}

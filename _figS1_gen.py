@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Figure S2 -- high-dimensional behaviour, drawn in the house style.
+"""Figure S1 -- high-dimensional behaviour, drawn in the house style.
 
 Chart-type discipline: Figures 1-3 already spend a residual strip, a logistic
 curve, capsules, a scatter, a paired scatter, a violin, a paired column and a

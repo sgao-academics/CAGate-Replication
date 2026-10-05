@@ -1,0 +1,30 @@
+{
+  "cancer": "KICH",
+  "n": 91,
+  "d": 100,
+  "k_gate": 65,
+  "ntrees": 1000,
+  "genie3_secs": 12.0,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 50.77,
+      "edges_evaluated": 65,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 18.46,
+      "edges_evaluated": 65,
+      "edges@0.3": 65
+    },
+    "base": {
+      "string_pct@k_gate": 18.46,
+      "edges_evaluated": 65,
+      "edges@0.3": 75
+    },
+    "notears": {
+      "string_pct@k_gate": 21.54,
+      "edges_evaluated": 65,
+      "edges@0.3": 76
+    }
+  }
+}

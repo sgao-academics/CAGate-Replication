@@ -1,0 +1,30 @@
+{
+  "cancer": "PAAD",
+  "n": 183,
+  "d": 100,
+  "k_gate": 67,
+  "ntrees": 1000,
+  "genie3_secs": 20.8,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 52.24,
+      "edges_evaluated": 67,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 34.33,
+      "edges_evaluated": 67,
+      "edges@0.3": 67
+    },
+    "base": {
+      "string_pct@k_gate": 31.34,
+      "edges_evaluated": 67,
+      "edges@0.3": 79
+    },
+    "notears": {
+      "string_pct@k_gate": 37.31,
+      "edges_evaluated": 67,
+      "edges@0.3": 83
+    }
+  }
+}

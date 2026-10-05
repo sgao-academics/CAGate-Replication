@@ -1,0 +1,30 @@
+{
+  "cancer": "MESO",
+  "n": 87,
+  "d": 100,
+  "k_gate": 25,
+  "ntrees": 1000,
+  "genie3_secs": 16.8,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 84.0,
+      "edges_evaluated": 25,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 44.0,
+      "edges_evaluated": 25,
+      "edges@0.3": 25
+    },
+    "base": {
+      "string_pct@k_gate": 48.0,
+      "edges_evaluated": 25,
+      "edges@0.3": 45
+    },
+    "notears": {
+      "string_pct@k_gate": 44.0,
+      "edges_evaluated": 25,
+      "edges@0.3": 56
+    }
+  }
+}

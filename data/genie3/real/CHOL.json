@@ -1,0 +1,30 @@
+{
+  "cancer": "CHOL",
+  "n": 45,
+  "d": 100,
+  "k_gate": 80,
+  "ntrees": 1000,
+  "genie3_secs": 10.8,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 20.0,
+      "edges_evaluated": 80,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 20.0,
+      "edges_evaluated": 80,
+      "edges@0.3": 80
+    },
+    "base": {
+      "string_pct@k_gate": 20.0,
+      "edges_evaluated": 80,
+      "edges@0.3": 81
+    },
+    "notears": {
+      "string_pct@k_gate": 20.0,
+      "edges_evaluated": 80,
+      "edges@0.3": 93
+    }
+  }
+}

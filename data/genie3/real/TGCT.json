@@ -1,0 +1,30 @@
+{
+  "cancer": "TGCT",
+  "n": 156,
+  "d": 100,
+  "k_gate": 71,
+  "ntrees": 1000,
+  "genie3_secs": 14.3,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 23.94,
+      "edges_evaluated": 71,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 16.9,
+      "edges_evaluated": 71,
+      "edges@0.3": 71
+    },
+    "base": {
+      "string_pct@k_gate": 22.54,
+      "edges_evaluated": 71,
+      "edges@0.3": 75
+    },
+    "notears": {
+      "string_pct@k_gate": 19.72,
+      "edges_evaluated": 71,
+      "edges@0.3": 85
+    }
+  }
+}

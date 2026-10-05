@@ -1,0 +1,30 @@
+{
+  "cancer": "THCA",
+  "n": 572,
+  "d": 100,
+  "k_gate": 62,
+  "ntrees": 1000,
+  "genie3_secs": 33.0,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 17.74,
+      "edges_evaluated": 62,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 12.9,
+      "edges_evaluated": 62,
+      "edges@0.3": 62
+    },
+    "base": {
+      "string_pct@k_gate": 12.9,
+      "edges_evaluated": 62,
+      "edges@0.3": 68
+    },
+    "notears": {
+      "string_pct@k_gate": 12.9,
+      "edges_evaluated": 62,
+      "edges@0.3": 69
+    }
+  }
+}

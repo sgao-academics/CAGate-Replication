@@ -1,0 +1,30 @@
+{
+  "cancer": "PCPG",
+  "n": 187,
+  "d": 100,
+  "k_gate": 46,
+  "ntrees": 1000,
+  "genie3_secs": 19.3,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 41.3,
+      "edges_evaluated": 46,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 21.74,
+      "edges_evaluated": 46,
+      "edges@0.3": 46
+    },
+    "base": {
+      "string_pct@k_gate": 19.57,
+      "edges_evaluated": 46,
+      "edges@0.3": 52
+    },
+    "notears": {
+      "string_pct@k_gate": 21.74,
+      "edges_evaluated": 46,
+      "edges@0.3": 53
+    }
+  }
+}

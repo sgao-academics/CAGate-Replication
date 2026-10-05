@@ -1,0 +1,30 @@
+{
+  "cancer": "KIRC",
+  "n": 606,
+  "d": 100,
+  "k_gate": 50,
+  "ntrees": 1000,
+  "genie3_secs": 35.2,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 82.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 34.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 50
+    },
+    "base": {
+      "string_pct@k_gate": 32.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 60
+    },
+    "notears": {
+      "string_pct@k_gate": 32.0,
+      "edges_evaluated": 50,
+      "edges@0.3": 56
+    }
+  }
+}

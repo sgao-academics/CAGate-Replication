@@ -1,0 +1,30 @@
+{
+  "cancer": "UVM",
+  "n": 80,
+  "d": 100,
+  "k_gate": 53,
+  "ntrees": 1000,
+  "genie3_secs": 11.8,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 37.74,
+      "edges_evaluated": 53,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 16.98,
+      "edges_evaluated": 53,
+      "edges@0.3": 53
+    },
+    "base": {
+      "string_pct@k_gate": 18.87,
+      "edges_evaluated": 53,
+      "edges@0.3": 65
+    },
+    "notears": {
+      "string_pct@k_gate": 18.87,
+      "edges_evaluated": 53,
+      "edges@0.3": 66
+    }
+  }
+}

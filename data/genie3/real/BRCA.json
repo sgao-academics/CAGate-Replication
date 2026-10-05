@@ -1,0 +1,30 @@
+{
+  "cancer": "BRCA",
+  "n": 1218,
+  "d": 100,
+  "k_gate": 30,
+  "ntrees": 1000,
+  "genie3_secs": 74.9,
+  "arms": {
+    "genie3": {
+      "string_pct@k_gate": 40.0,
+      "edges_evaluated": 30,
+      "edges@0.3": 0
+    },
+    "gate": {
+      "string_pct@k_gate": 36.67,
+      "edges_evaluated": 30,
+      "edges@0.3": 30
+    },
+    "base": {
+      "string_pct@k_gate": 36.67,
+      "edges_evaluated": 30,
+      "edges@0.3": 37
+    },
+    "notears": {
+      "string_pct@k_gate": 36.67,
+      "edges_evaluated": 30,
+      "edges@0.3": 38
+    }
+  }
+}

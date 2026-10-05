@@ -1,10 +1,10 @@
-# CAGate: Cluster-Aware Gating Improves the Precision of Causal Discovery in Heterogeneous Cancer Transcriptomes
+# CAGate: Cluster-Aware Gating and Cross-Cancer Consensus Improve the Precision of Causal Discovery in Heterogeneous Cancer Transcriptomes
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
 [![Preprint](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.7164939-orange)](https://doi.org/10.2139/ssrn.7164939)
 
-Replication package for *CAGate: Cluster-Aware Gating Improves the Precision of
+Replication package for *CAGate: Cluster-Aware Gating and Cross-Cancer Consensus
 Causal Discovery in Heterogeneous Cancer Transcriptomes* — Shuaidong Gao
 (Chongqing Institute of Foreign Studies).
 
@@ -28,11 +28,24 @@ python run_all.py
 no GPU, no network, no TCGA download, under a minute. Output goes to
 `figures/` (Fig. 1–4) and `figures_supplementary/` (Fig. S1–S5).
 
+## Reproducibility levels
+
+| Level | Command | What it reproduces |
+|:--|:--|:--|
+| 1 — figures | `python run_all.py` | Every figure, from `data/*.json`; under a minute, no network, no GPU |
+| 2 — results | `python run_fit.py --data-dir <tcga> [CHOL ...]` | Re-fits the three arms from the raw expression matrices and rewrites `data/pan_cancer/*.json`; needs the TCGA matrices and ~2–9 min per cancer on CPU |
+| 3 — raw data | `python download_tcga.py` | Fetches TCGA RNA-Seq from UCSC Xena |
+| 3b — notes SN21–SN23 | `python scripts/<driver>.py` | Re-runs the analyses added after the preprint (Supplementary Notes SN21–SN23); the synthetic ones need only this package, the database ones also need the STRING v12 raw files |
+
+Level 2 closes the gap left by level 1, which regenerates the figures but not the numbers they plot. The re-fit is exact for a fixed solver stack; the one requirement is **single-threaded BLAS** (`OMP_NUM_THREADS=1`, `OPENBLAS_NUM_THREADS=1`, `MKL_NUM_THREADS=1`, which `run_fit.py` sets itself). Multithreaded BLAS changes the floating-point reduction order inside L-BFGS-B and can shift the flattest arm (base) by a few edges; single-threaded, the refit reproduces **all 33 cancer types exactly** — sample size, gene panel, and the base / gate / NOTEARS edge counts all match the released `data/pan_cancer/*.json` (33 / 33). The manuscript quotes the counts from the released checkpoints, which these reproduce.
+
 ## Layout
 
 | Path | Contents |
 |:--|:--|
-| `run_all.py` | One-click regeneration of every figure |
+| `run_all.py` | One-click regeneration of every figure (level 1 below) |
+| `run_fit.py` | Re-fits the three arms from the raw TCGA matrices and rewrites `data/pan_cancer/*.json` (level 2 below) |
+| `scripts/` | The drivers behind Supplementary Notes SN21–SN23 — structural heterogeneity versus dispersion, the published GENIE3 baseline with its degree-matched null, and the STRING threshold sweep — with their helper modules and the vendored GENIE3 implementation |
 | `cagate.py` | The CAGate solver: doubled-variable L-BFGS-B with an augmented Lagrangian and a residual-contrast cluster gate |
 | `notears_linear.py`, `notears_utils.py` | The NOTEARS baseline, run to convergence, used throughout |
 | `_fig1_gen.py` | Figure 1 — mechanism: residual dispersion → gate → cluster weights |
@@ -93,10 +106,39 @@ All comparisons in this package use a NOTEARS solver run to convergence.
 | `alpha_sweep.json` | Figure 3(c), Supplementary Figure S2(b) and Supplementary Table S4 — the *α* sensitivity sweep |
 | `fig4_data.json` | Figure 4 — every panel |
 | `figS34_data.json` | Supplementary Figures S3 and S4 |
+| `hetero/*.json` | Supplementary Note SN21 and Table S12 — dispersion versus structure |
+| `genie3/{synth,real,vim}/` | Supplementary Note SN22 — the published tree-ensemble baseline, and the score matrices behind its degree-matched null |
+| `hubnull/hubnull.json` | Supplementary Note SN22 — the stub-matched (degree-preserving) null |
+| `string_threshold/*.json` | Supplementary Note SN23 — external support at combined score ≥ 400 / 700 / 900 |
+| `mega33_w/*` | The three arms' weight matrices — the common input of SN22 and SN23 |
 
 TCGA RNA-Seq data are public and are not redistributed here;
 `download_tcga.py` fetches them from UCSC Xena. All experiments use fixed random
 seeds.
+
+## Notes SN21–SN23 (added after the preprint)
+
+| Note | Driver | Reproducible from |
+|:--|:--|:--|
+| SN21 — dispersion versus structure | `scripts/_A_M1_hetero.py`, `scripts/_A_M1b_gate_scale.py` | this package alone (synthetic) |
+| SN22 — published baseline (GENIE3) | `scripts/_b3_genie3.py`, `scripts/_b3_genie3_vim.py`, `scripts/_b3_hubnull.py` | `data/mega33_w/` plus the STRING v12 raw files |
+| SN23 — STRING threshold sweep | `scripts/_b3_stringthr.py` | `data/mega33_w/`, `data/genie3/vim/` plus the STRING v12 raw files |
+
+The synthetic note (SN21) runs end to end from a fresh clone with no external
+input — `python scripts/_A_M1_hetero.py`. The two database notes locate their
+external input through environment variables, because neither STRING nor TCGA is
+redistributed here:
+
+| Variable | Points at | Used by |
+|:--|:--|:--|
+| `STRING_DATA_DIR` | the directory holding the STRING v12 `9606.protein.links.v12.0.txt.gz` and its alias file | SN22, SN23 |
+| `TCGA_DATA_DIR` | a directory of `TCGA_<CANCER>_HiSeqV2.tsv` files | the expression loader shared with `run_fit.py` |
+| `STRING_CACHE_DIR` | optional scratch directory for the parsed STRING pools (defaults to `data/_cache/`) | SN22, SN23 |
+
+GENIE3 is vendored verbatim from the author's repository
+(`scripts/genie3_vendor/GENIE3.py`, `github.com/vahuynh/GENIE3`), so the baseline
+runs without a network dependency. The driver scripts keep their original working
+names on purpose, so that each one can be lined up with the note it produces.
 
 ## Environment
 
@@ -113,12 +155,20 @@ sha256sum -c SHA256SUMS.txt
 
 ```bibtex
 @article{gao2026cagate,
-  title  = {CAGate: Cluster-Aware Gating Improves the Precision of Causal Discovery in Heterogeneous Cancer Transcriptomes},
+  title  = {CAGate: Cluster-Aware Gating and Cross-Cancer Consensus Improve the Precision of Causal Discovery in Heterogeneous Cancer Transcriptomes},
   author = {Gao, Shuaidong},
   year   = {2026},
   doi    = {10.2139/ssrn.7164939}
 }
 ```
+
+## Preprint
+
+An earlier version is on SSRN ([10.2139/ssrn.7164939](https://doi.org/10.2139/ssrn.7164939)).
+It corresponds to a pre-submission draft; the present package is the version
+submitted to the *Journal of Bioinformatics and Computational Biology* and
+supersedes it. The signed-edge and cross-cancer-consensus analyses were added
+after the preprint.
 
 ## Patent
 
@@ -134,3 +184,10 @@ differentiable causal-discovery methods and diagnostics.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+The code is released under the MIT Licence. The CAGate *method* is the subject of
+patent application CNIPA 202611098494.0 (and a corresponding US provisional
+application); the MIT grant covers the code as published and does not by itself
+grant a patent licence. Academic and other non-commercial research use of the
+method as described in the paper is permitted; commercial use of the patented
+method may require a separate licence.
