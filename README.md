@@ -35,7 +35,7 @@ no GPU, no network, no TCGA download, under a minute. Output goes to
 | 1 — figures | `python run_all.py` | Every figure, from `data/*.json`; under a minute, no network, no GPU |
 | 2 — results | `python run_fit.py --data-dir <tcga> [CHOL ...]` | Re-fits the three arms from the raw expression matrices and rewrites `data/pan_cancer/*.json`; needs the TCGA matrices and ~2–9 min per cancer on CPU |
 | 3 — raw data | `python download_tcga.py` | Fetches TCGA RNA-Seq from UCSC Xena |
-| 3b — notes SN21–SN26 | `python scripts/<driver>.py` | Re-runs the analyses added after the preprint (Supplementary Notes SN21–SN26); the synthetic ones need only this package, the database ones also need the STRING v12 raw files, and the subtype control also needs the TCGA matrices |
+| 3b — notes SN21–SN28 | `python scripts/<driver>.py` | Re-runs the analyses added after the preprint (Supplementary Notes SN21–SN28); the synthetic ones need only this package, the database ones also need the STRING v12 raw files, and the subtype control also needs the TCGA matrices |
 
 Level 2 closes the gap left by level 1, which regenerates the figures but not the numbers they plot. The re-fit is exact for a fixed solver stack; the one requirement is **single-threaded BLAS** (`OMP_NUM_THREADS=1`, `OPENBLAS_NUM_THREADS=1`, `MKL_NUM_THREADS=1`, which `run_fit.py` sets itself). Multithreaded BLAS changes the floating-point reduction order inside L-BFGS-B and can shift the flattest arm (base) by a few edges; single-threaded, the refit reproduces **all 33 cancer types exactly** — sample size, gene panel, and the base / gate / NOTEARS edge counts all match the released `data/pan_cancer/*.json` (33 / 33). The manuscript quotes the counts from the released checkpoints, which these reproduce.
 
@@ -118,12 +118,14 @@ All comparisons in this package use a NOTEARS solver run to convergence.
 | `subtypes/{BRCA,GBM,LUAD}_clinical.tsv` | the published subtype calls used by note SN25, exported from cBioPortal (PanCancer Atlas) |
 | `A_M6_effect.json`, `table_s5.json` | Supplementary Note SN26 — the effect-size accounting, and Table S5 in machine-readable form |
 | `nonlin/*.json` | The hub-dominated synthetic benchmark (`scripts/_A_M5_nonlin.py`) |
+| `spread_calib/*.json` | Supplementary Note SN27 — the synthetic gain at each relative dispersion span |
+| `A_M1_seedstab.json` | Supplementary Note SN28 — the recurrence ladder under both subsample seeds, with the overlap statistics |
 
 TCGA RNA-Seq data are public and are not redistributed here;
 `download_tcga.py` fetches them from UCSC Xena. All experiments use fixed random
 seeds.
 
-## Notes SN21–SN26 (added after the preprint)
+## Notes SN21–SN28 (added after the preprint)
 
 | Note | Driver | Reproducible from |
 |:--|:--|:--|
@@ -134,6 +136,8 @@ seeds.
 | SN25 — published-subtype-label control | `scripts/_A_M1b_published_label_gate.py`, `scripts/_A_M1c_published_label_diagnosis.py`, `scripts/_A_M1_subtype.py`, `scripts/_A_M1d_subtype_extension.py` | `data/subtypes_run/`, `data/subtypes/*_clinical.tsv` (shipped) plus the TCGA matrices |
 | SN26 — effect size and multiplicity | `scripts/_A_M6_effect.py` | this package alone (`data/table_s5.json`) |
 | SN20 addition — two-axis split | `scripts/_A_M3_axes.py`, `scripts/_A_M3_axes2.py` | this package alone (GO files needed for the GO version) |
+| SN27 — spread dependence of the synthetic gain | `scripts/_A_M2b_spread_calibrated.py` | this package alone (synthetic) |
+| SN28 — subsample-seed robustness of the ladder | `scripts/_consensus_subsample_solve.py`, `scripts/_A_M1e_consensus_seed_stability.py` | step 1 needs the TCGA matrices (`TCGA_DATA_DIR`, `SUBSAMPLE_SEED`); step 2 runs from the two weight directories alone, and the support columns additionally need the derived source files (`STRING_SUPPORT_JSON`, `HALLMARK_JSON`) |
 | hub-dominated nonlinear benchmark | `scripts/_A_M5_nonlin.py` | this package alone (synthetic) |
 
 The synthetic notes (SN21 and the nonlinear benchmark) and the arithmetic notes
@@ -148,6 +152,8 @@ redistributed here:
 | `GO_DATA_DIR` | the directory holding `go_basic.obo` and `goa_human.gaf.gz` (defaults to `STRING_DATA_DIR`) | the GO arm of the SN20 axis split |
 | `TCGA_DATA_DIR` | a directory of `TCGA_<CANCER>_HiSeqV2.tsv` files | the expression loader shared with `run_fit.py`, and SN25 |
 | `STRING_CACHE_DIR` | optional scratch directory for the parsed STRING pools (defaults to `data/_cache/`) | SN22, SN23, SN24 |
+| `STRING_SUPPORT_JSON` | a JSON with the derived `STRING` and `BioGRID` pair lists for the panel | the support columns of SN23, SN24 and SN28 |
+| `HALLMARK_JSON` | a JSON with the derived MSigDB Hallmark co-membership `pairs` list | the Hallmark column of SN28 |
 
 GENIE3 is vendored verbatim from the author's repository
 (`scripts/genie3_vendor/GENIE3.py`, `github.com/vahuynh/GENIE3`), so the baseline
