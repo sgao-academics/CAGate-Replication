@@ -1,0 +1,257 @@
+{
+  "BRCA": {
+    "n": 963,
+    "clusters": [
+      "Basal",
+      "Her2",
+      "LumA",
+      "LumB",
+      "Normal"
+    ],
+    "n_clusters": 5,
+    "gate_mean_per_cluster": {
+      "Basal": 0.4972,
+      "Her2": 0.5,
+      "LumA": 0.5001,
+      "LumB": 0.5024,
+      "Normal": 0.4991
+    },
+    "arms": {
+      "base": {
+        "edges": 41,
+        "string": 12,
+        "string_pct": 29.27,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 12,
+        "either_pct": 29.27,
+        "rand_string_pct": 1.2414634146341463
+      },
+      "gate": {
+        "edges": 31,
+        "string": 10,
+        "string_pct": 32.26,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 10,
+        "either_pct": 32.26,
+        "rand_string_pct": 1.2903225806451613
+      },
+      "gate_km": {
+        "edges": 31,
+        "string": 10,
+        "string_pct": 32.26,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 10,
+        "either_pct": 32.26,
+        "rand_string_pct": 1.3451612903225807
+      },
+      "gate_perm": {
+        "edges": 31,
+        "string": 10,
+        "string_pct": 32.26,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 10,
+        "either_pct": 32.26,
+        "rand_string_pct": 1.364516129032258
+      },
+      "gate_matched(base-topk)": {
+        "edges": 31,
+        "string": 11,
+        "string_pct": 35.48,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 11,
+        "either_pct": 35.48
+      },
+      "gate_km_matched(base-topk)": {
+        "edges": 31,
+        "string": 11,
+        "string_pct": 35.48,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 11,
+        "either_pct": 35.48
+      },
+      "gate_perm_matched(base-topk)": {
+        "edges": 31,
+        "string": 11,
+        "string_pct": 35.48,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 11,
+        "either_pct": 35.48
+      }
+    }
+  },
+  "GBM": {
+    "n": 164,
+    "clusters": [
+      "Classical",
+      "Mesenchymal",
+      "Neural",
+      "Proneural"
+    ],
+    "n_clusters": 4,
+    "gate_mean_per_cluster": {
+      "Classical": 0.4999,
+      "Mesenchymal": 0.4964,
+      "Neural": 0.5005,
+      "Proneural": 0.5001
+    },
+    "arms": {
+      "base": {
+        "edges": 66,
+        "string": 16,
+        "string_pct": 24.24,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 16,
+        "either_pct": 24.24,
+        "rand_string_pct": 1.4712121212121212
+      },
+      "gate": {
+        "edges": 56,
+        "string": 14,
+        "string_pct": 25.0,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 25.0,
+        "rand_string_pct": 1.6107142857142858
+      },
+      "gate_km": {
+        "edges": 57,
+        "string": 14,
+        "string_pct": 24.56,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 24.56,
+        "rand_string_pct": 1.619298245614035
+      },
+      "gate_perm": {
+        "edges": 55,
+        "string": 14,
+        "string_pct": 25.45,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 25.45,
+        "rand_string_pct": 1.509090909090909
+      },
+      "gate_matched(base-topk)": {
+        "edges": 56,
+        "string": 14,
+        "string_pct": 25.0,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 25.0
+      },
+      "gate_km_matched(base-topk)": {
+        "edges": 57,
+        "string": 15,
+        "string_pct": 26.32,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 15,
+        "either_pct": 26.32
+      },
+      "gate_perm_matched(base-topk)": {
+        "edges": 55,
+        "string": 14,
+        "string_pct": 25.45,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 25.45
+      }
+    }
+  },
+  "LUAD": {
+    "n": 275,
+    "clusters": [
+      "Bronchioid",
+      "Magnoid",
+      "Squamoid"
+    ],
+    "n_clusters": 3,
+    "gate_mean_per_cluster": {
+      "Bronchioid": 0.5023,
+      "Magnoid": 0.4986,
+      "Squamoid": 0.5
+    },
+    "arms": {
+      "base": {
+        "edges": 49,
+        "string": 14,
+        "string_pct": 28.57,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 28.57,
+        "rand_string_pct": 1.273469387755102
+      },
+      "gate": {
+        "edges": 41,
+        "string": 14,
+        "string_pct": 34.15,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 34.15,
+        "rand_string_pct": 1.1682926829268292
+      },
+      "gate_km": {
+        "edges": 42,
+        "string": 14,
+        "string_pct": 33.33,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 33.33,
+        "rand_string_pct": 1.2833333333333334
+      },
+      "gate_perm": {
+        "edges": 42,
+        "string": 14,
+        "string_pct": 33.33,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 33.33,
+        "rand_string_pct": 1.1928571428571428
+      },
+      "gate_matched(base-topk)": {
+        "edges": 41,
+        "string": 14,
+        "string_pct": 34.15,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 34.15
+      },
+      "gate_km_matched(base-topk)": {
+        "edges": 42,
+        "string": 14,
+        "string_pct": 33.33,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 33.33
+      },
+      "gate_perm_matched(base-topk)": {
+        "edges": 42,
+        "string": 14,
+        "string_pct": 33.33,
+        "trrust": 0,
+        "trrust_pct": 0.0,
+        "either": 14,
+        "either_pct": 33.33
+      }
+    }
+  }
+}

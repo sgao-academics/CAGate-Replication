@@ -1,0 +1,146 @@
+{
+  "BRCA": {
+    "n": 963,
+    "subtype_col": "PAM50Call_RNAseq",
+    "arms": {
+      "base": {
+        "edges": 41,
+        "string_pct": 29.27,
+        "trrust_pct": 0.0,
+        "control_string_pct": "-"
+      },
+      "gate(a=0.5,pub)": {
+        "edges": 31,
+        "string_pct": 32.26,
+        "trrust_pct": 0.0,
+        "control_string_pct": "35.5%"
+      },
+      "gate(a=0.5,perm)": {
+        "edges": 31,
+        "string_pct": 32.26,
+        "trrust_pct": 0.0,
+        "control_string_pct": "35.5%"
+      },
+      "gate(a=5,pub)": {
+        "edges": 31,
+        "string_pct": 32.26,
+        "trrust_pct": 0.0,
+        "control_string_pct": "35.5%"
+      },
+      "gate(a=20,pub)": {
+        "edges": 31,
+        "string_pct": 35.48,
+        "trrust_pct": 0.0,
+        "control_string_pct": "35.5%"
+      },
+      "gate(a=50,pub)": {
+        "edges": 27,
+        "string_pct": 40.74,
+        "trrust_pct": 0.0,
+        "control_string_pct": "37.0%"
+      },
+      "gate(a=100,pub)": {
+        "edges": 21,
+        "string_pct": 47.62,
+        "trrust_pct": 0.0,
+        "control_string_pct": "38.1%"
+      }
+    }
+  },
+  "GBM": {
+    "n": 164,
+    "subtype_col": "GeneExp_Subtype",
+    "arms": {
+      "base": {
+        "edges": 66,
+        "string_pct": 24.24,
+        "trrust_pct": 0.0,
+        "control_string_pct": "-"
+      },
+      "gate(a=0.5,pub)": {
+        "edges": 56,
+        "string_pct": 25.0,
+        "trrust_pct": 0.0,
+        "control_string_pct": "25.0%"
+      },
+      "gate(a=0.5,perm)": {
+        "edges": 55,
+        "string_pct": 25.45,
+        "trrust_pct": 0.0,
+        "control_string_pct": "25.4%"
+      },
+      "gate(a=5,pub)": {
+        "edges": 54,
+        "string_pct": 25.93,
+        "trrust_pct": 0.0,
+        "control_string_pct": "25.9%"
+      },
+      "gate(a=20,pub)": {
+        "edges": 57,
+        "string_pct": 26.32,
+        "trrust_pct": 0.0,
+        "control_string_pct": "26.3%"
+      },
+      "gate(a=50,pub)": {
+        "edges": 54,
+        "string_pct": 25.93,
+        "trrust_pct": 0.0,
+        "control_string_pct": "25.9%"
+      },
+      "gate(a=100,pub)": {
+        "edges": 59,
+        "string_pct": 23.73,
+        "trrust_pct": 0.0,
+        "control_string_pct": "25.4%"
+      }
+    }
+  },
+  "LUAD": {
+    "n": 275,
+    "subtype_col": "Expression_Subtype",
+    "arms": {
+      "base": {
+        "edges": 49,
+        "string_pct": 28.57,
+        "trrust_pct": 0.0,
+        "control_string_pct": "-"
+      },
+      "gate(a=0.5,pub)": {
+        "edges": 41,
+        "string_pct": 34.15,
+        "trrust_pct": 0.0,
+        "control_string_pct": "34.1%"
+      },
+      "gate(a=0.5,perm)": {
+        "edges": 42,
+        "string_pct": 33.33,
+        "trrust_pct": 0.0,
+        "control_string_pct": "33.3%"
+      },
+      "gate(a=5,pub)": {
+        "edges": 41,
+        "string_pct": 31.71,
+        "trrust_pct": 0.0,
+        "control_string_pct": "34.1%"
+      },
+      "gate(a=20,pub)": {
+        "edges": 40,
+        "string_pct": 32.5,
+        "trrust_pct": 0.0,
+        "control_string_pct": "35.0%"
+      },
+      "gate(a=50,pub)": {
+        "edges": 37,
+        "string_pct": 32.43,
+        "trrust_pct": 0.0,
+        "control_string_pct": "37.8%"
+      },
+      "gate(a=100,pub)": {
+        "edges": 36,
+        "string_pct": 33.33,
+        "trrust_pct": 0.0,
+        "control_string_pct": "38.9%"
+      }
+    }
+  }
+}

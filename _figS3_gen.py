@@ -80,8 +80,8 @@ A.legend(handles=[Line2D([], [], marker='s', ls='', ms=5.0, mfc=COL[KP], mec=COL
          loc='lower right', bbox_to_anchor=(1.0, 1.012), ncol=2, frameon=False,
          fontsize=7.5, handlelength=0.8, handletextpad=0.35, labelspacing=0.28,
          borderpad=0.0, columnspacing=1.6)
-haloed_text(A, 130, 4.06, 'the KEGG panel saturates\nKEGG and MSigDB', size=7.5,
-            color=INK, ha='right', va='top')
+haloed_text(A, 850, 3.50, 'the KEGG panel saturates\nKEGG and MSigDB', size=7.5,
+            color=INK, ha='right', va='center')
 
 co = D['coherence']
 KEY = [('STRING', 'STRING'), ('BioGRID', 'BioGRID'),

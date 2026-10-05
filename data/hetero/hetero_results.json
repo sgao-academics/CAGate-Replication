@@ -7,7 +7,7 @@
   "f1_gate": 0.4912280701754386,
   "d_gate_base": 0.04678362573099415,
   "d_gate_notears": 0.04678362573099415,
-  "secs": 4.2
+  "secs": 57.4
  },
  {
   "model": "V0 noise-only (vs backbone)",
@@ -17,7 +17,7 @@
   "f1_gate": 0.6666666666666665,
   "d_gate_base": 0.0350877192982455,
   "d_gate_notears": 0.023809523809523614,
-  "secs": 3.8
+  "secs": 36.2
  },
  {
   "model": "V0 noise-only (vs backbone)",
@@ -27,7 +27,7 @@
   "f1_gate": 0.6206896551724138,
   "d_gate_base": 0.0,
   "d_gate_notears": 0.0,
-  "secs": 4.1
+  "secs": 45.5
  },
  {
   "model": "V0 noise-only (vs backbone)",
@@ -37,7 +37,7 @@
   "f1_gate": 0.4482758620689655,
   "d_gate_base": 0.014942528735632177,
   "d_gate_notears": 0.014942528735632177,
-  "secs": 4.1
+  "secs": 39.9
  },
  {
   "model": "V0 noise-only (vs backbone)",
@@ -47,7 +47,7 @@
   "f1_gate": 0.6666666666666666,
   "d_gate_base": 0.05649717514124286,
   "d_gate_notears": 0.05649717514124286,
-  "secs": 3.3
+  "secs": 33.3
  },
  {
   "model": "V1 sym rho=0.25",
@@ -57,7 +57,7 @@
   "f1_gate": 0.4999999999999999,
   "d_gate_base": -0.16666666666666685,
   "d_gate_notears": -0.1434782608695654,
-  "secs": 8.4,
+  "secs": 93.7,
   "rho": 0.25,
   "truth": "union",
   "gamma_extracarrying": 0.37534989825036363
@@ -70,7 +70,7 @@
   "f1_gate": 0.6595744680851064,
   "d_gate_base": 0.006109121550453067,
   "d_gate_notears": 0.006109121550453067,
-  "secs": 5.4,
+  "secs": 54.5,
   "rho": 0.25,
   "truth": "union",
   "gamma_extracarrying": 0.43843342731587703
@@ -83,7 +83,7 @@
   "f1_gate": 0.5806451612903226,
   "d_gate_base": -0.12020953956437819,
   "d_gate_notears": -0.13121924548933828,
-  "secs": 7.8,
+  "secs": 38.6,
   "rho": 0.25,
   "truth": "union",
   "gamma_extracarrying": 0.3206912294785459
@@ -96,7 +96,7 @@
   "f1_gate": 0.5490196078431373,
   "d_gate_base": -0.15589842494374795,
   "d_gate_notears": -0.13390722142515543,
-  "secs": 8.7,
+  "secs": 46.6,
   "rho": 0.25,
   "truth": "union",
   "gamma_extracarrying": 0.4035160891259641
@@ -109,7 +109,7 @@
   "f1_gate": 0.6909090909090909,
   "d_gate_base": -0.07832167832167836,
   "d_gate_notears": -0.07832167832167836,
-  "secs": 5.5,
+  "secs": 29.1,
   "rho": 0.25,
   "truth": "union",
   "gamma_extracarrying": 0.47958385489453653
@@ -122,7 +122,7 @@
   "f1_gate": 0.49230769230769234,
   "d_gate_base": -0.15137046861184789,
   "d_gate_notears": -0.15137046861184789,
-  "secs": 5.8,
+  "secs": 26.0,
   "rho": 0.25,
   "truth": "union",
   "gamma_carrying": 9.134848011797735e-07,
@@ -136,7 +136,7 @@
   "f1_gate": 0.6666666666666666,
   "d_gate_base": -0.07692307692307698,
   "d_gate_notears": -0.07692307692307698,
-  "secs": 5.0,
+  "secs": 20.2,
   "rho": 0.25,
   "truth": "union",
   "gamma_carrying": 0.16704623308543554,
@@ -150,7 +150,7 @@
   "f1_gate": 0.6756756756756757,
   "d_gate_base": -0.08381799521040034,
   "d_gate_notears": -0.09355509355509362,
-  "secs": 5.6,
+  "secs": 22.0,
   "rho": 0.25,
   "truth": "union",
   "gamma_carrying": 0.3721031685791509,
@@ -164,7 +164,7 @@
   "f1_gate": 0.5633802816901408,
   "d_gate_base": -0.18080576482148714,
   "d_gate_notears": -0.1722519022179052,
-  "secs": 6.0,
+  "secs": 24.6,
   "rho": 0.25,
   "truth": "union",
   "gamma_carrying": 0.09769124730440847,
@@ -178,7 +178,7 @@
   "f1_gate": 0.4507042253521127,
   "d_gate_base": -0.25517812758906383,
   "d_gate_notears": -0.25517812758906383,
-  "secs": 5.1,
+  "secs": 20.6,
   "rho": 0.25,
   "truth": "union",
   "gamma_carrying": 0.1383561551863975,
@@ -192,7 +192,7 @@
   "f1_gate": 0.6119402985074627,
   "d_gate_base": -0.09554269468981624,
   "d_gate_notears": -0.09076240419524007,
-  "secs": 8.9,
+  "secs": 35.3,
   "rho": 0.5,
   "truth": "union",
   "gamma_extracarrying": 0.4874952458685851
@@ -205,7 +205,7 @@
   "f1_gate": 0.5999999999999999,
   "d_gate_base": -0.10503597122302177,
   "d_gate_notears": -0.11014492753623195,
-  "secs": 6.5,
+  "secs": 26.8,
   "rho": 0.5,
   "truth": "union",
   "gamma_extracarrying": 0.3671177183000259
@@ -218,7 +218,7 @@
   "f1_gate": 0.6029411764705882,
   "d_gate_base": -0.14544592030360537,
   "d_gate_notears": -0.15346907993966818,
-  "secs": 9.1,
+  "secs": 38.3,
   "rho": 0.5,
   "truth": "union",
   "gamma_extracarrying": 0.40289470673350686
@@ -231,7 +231,7 @@
   "f1_gate": 0.5757575757575758,
   "d_gate_base": -0.1842424242424241,
   "d_gate_notears": -0.1792093116596427,
-  "secs": 8.6,
+  "secs": 34.4,
   "rho": 0.5,
   "truth": "union",
   "gamma_extracarrying": 0.458227594863411
@@ -244,7 +244,7 @@
   "f1_gate": 0.6324786324786325,
   "d_gate_base": -0.09059829059829061,
   "d_gate_notears": -0.09059829059829061,
-  "secs": 5.7,
+  "secs": 22.2,
   "rho": 0.5,
   "truth": "union",
   "gamma_extracarrying": 0.4041048302529181
@@ -257,7 +257,7 @@
   "f1_gate": 0.4691358024691357,
   "d_gate_base": -0.15086419753086439,
   "d_gate_notears": -0.15086419753086439,
-  "secs": 5.9,
+  "secs": 23.8,
   "rho": 0.5,
   "truth": "union",
   "gamma_carrying": 1.4928384633315078e-12,
@@ -271,7 +271,7 @@
   "f1_gate": 0.6190476190476191,
   "d_gate_base": -0.03401360544217691,
   "d_gate_notears": -0.054421768707483054,
-  "secs": 5.4,
+  "secs": 22.2,
   "rho": 0.5,
   "truth": "union",
   "gamma_carrying": 0.13731650942173876,
@@ -285,7 +285,7 @@
   "f1_gate": 0.5925925925925926,
   "d_gate_base": -0.04006046863189727,
   "d_gate_notears": -0.05387205387205385,
-  "secs": 7.4,
+  "secs": 29.5,
   "rho": 0.5,
   "truth": "union",
   "gamma_carrying": 0.16461035266431498,
@@ -299,7 +299,7 @@
   "f1_gate": 0.5063291139240507,
   "d_gate_base": -0.19637358877865196,
   "d_gate_notears": -0.19637358877865196,
-  "secs": 5.9,
+  "secs": 23.0,
   "rho": 0.5,
   "truth": "union",
   "gamma_carrying": 5.488769747645163e-11,
@@ -313,7 +313,7 @@
   "f1_gate": 0.5476190476190477,
   "d_gate_base": -0.13809523809523805,
   "d_gate_notears": -0.14468864468864462,
-  "secs": 5.1,
+  "secs": 20.2,
   "rho": 0.5,
   "truth": "union",
   "gamma_carrying": 0.009873979628444801,
@@ -327,7 +327,7 @@
   "f1_gate": 0.6871165644171779,
   "d_gate_base": -0.1264427576167203,
   "d_gate_notears": -0.19586215898707737,
-  "secs": 16.3,
+  "secs": 62.9,
   "rho": 1.0,
   "truth": "union",
   "gamma_extracarrying": 0.47261778479615896
@@ -340,7 +340,7 @@
   "f1_gate": 0.8160919540229884,
   "d_gate_base": -0.05021820640481911,
   "d_gate_notears": -0.07864488808227466,
-  "secs": 15.5,
+  "secs": 64.6,
   "rho": 1.0,
   "truth": "union",
   "gamma_extracarrying": 0.49999999909094095
@@ -353,7 +353,7 @@
   "f1_gate": 0.6909090909090909,
   "d_gate_base": -0.11128871128871132,
   "d_gate_notears": -0.08875192604006155,
-  "secs": 13.1,
+  "secs": 53.3,
   "rho": 1.0,
   "truth": "union",
   "gamma_extracarrying": 0.41796445761172646
@@ -366,7 +366,7 @@
   "f1_gate": 0.7790697674418605,
   "d_gate_base": -0.04774587501624006,
   "d_gate_notears": -0.07498428661219358,
-  "secs": 13.5,
+  "secs": 65.7,
   "rho": 1.0,
   "truth": "union",
   "gamma_extracarrying": 0.49974093802922515
@@ -379,7 +379,7 @@
   "f1_gate": 0.8070175438596492,
   "d_gate_base": 0.011695906432748537,
   "d_gate_notears": -0.029140648230746247,
-  "secs": 9.3,
+  "secs": 37.2,
   "rho": 1.0,
   "truth": "union",
   "gamma_extracarrying": 0.49556080001893815
@@ -392,7 +392,7 @@
   "f1_gate": 0.36363636363636365,
   "d_gate_base": -0.28425096030729824,
   "d_gate_notears": -0.339066339066339,
-  "secs": 8.5,
+  "secs": 33.0,
   "rho": 1.0,
   "truth": "union",
   "gamma_carrying": 2.3564093150769374e-125,
@@ -406,7 +406,7 @@
   "f1_gate": 0.4752475247524752,
   "d_gate_base": -0.3194544620024917,
   "d_gate_notears": -0.3062094288899089,
-  "secs": 8.0,
+  "secs": 29.9,
   "rho": 1.0,
   "truth": "union",
   "gamma_carrying": 1.1221771309345308e-126,
@@ -420,7 +420,7 @@
   "f1_gate": 0.41904761904761906,
   "d_gate_base": -0.2658838878016961,
   "d_gate_notears": -0.2430213464696223,
-  "secs": 8.4,
+  "secs": 31.7,
   "rho": 1.0,
   "truth": "union",
   "gamma_carrying": 2.3407846877411344e-130,
@@ -434,7 +434,7 @@
   "f1_gate": 0.38461538461538464,
   "d_gate_base": -0.23408965135583842,
   "d_gate_notears": -0.23408965135583842,
-  "secs": 6.3,
+  "secs": 23.1,
   "rho": 1.0,
   "truth": "union",
   "gamma_carrying": 4.733804458257648e-15,
@@ -448,7 +448,7 @@
   "f1_gate": 0.4646464646464646,
   "d_gate_base": -0.2744839701361443,
   "d_gate_notears": -0.2744839701361443,
-  "secs": 6.5,
+  "secs": 23.0,
   "rho": 1.0,
   "truth": "union",
   "gamma_carrying": 9.23665438909954e-29,

@@ -225,7 +225,7 @@ def main():
     ap.add_argument('--ntrees-real', type=int, default=1000)
     ap.add_argument('--nthreads-real', type=int, default=8)
     a = ap.parse_args()
-    print('JOB B / GENIE3 external baseline  part=%s  ntrees_synth=%d ntrees_real=%d '
+    print('GENIE3 external baseline  part=%s  ntrees_synth=%d ntrees_real=%d '
           'nthreads_real=%d' % (a.part, a.ntrees_synth, a.ntrees_real, a.nthreads_real),
           flush=True)
     if a.part in ('synth', 'both'):
@@ -247,7 +247,7 @@ def main():
                 real_unit(c, pool, a.ntrees_real, a.nthreads_real)
             except Exception as e:
                 print('  %-5s ERROR %s %s' % (c, type(e).__name__, e), flush=True)
-    print('JOB B done', flush=True)
+    print('GENIE3 baseline done', flush=True)
 
 
 if __name__ == '__main__':

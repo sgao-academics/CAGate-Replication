@@ -34,7 +34,7 @@ def main():
     from _b3_genie3 import CANCERS
 
     os.makedirs(VIMDIR, exist_ok=True)
-    print('JOB B-vim: dumping GENIE3 VIM for %d cancers' % len(CANCERS), flush=True)
+    print('GENIE3 VIM dump for %d cancers' % len(CANCERS), flush=True)
     t0 = time.time()
     for c in CANCERS:
         fp = os.path.join(VIMDIR, '%s.npz' % c)
@@ -57,7 +57,7 @@ def main():
         np.savez_compressed(tmp, VIM=G, genes=np.array(genes, dtype=object))
         os.replace(tmp, fp)
         print('  %-5s: VIM %s  (%.0fs)' % (c, G.shape, time.time() - t), flush=True)
-    print('JOB B-vim done (%.0fs)' % (time.time() - t0), flush=True)
+    print('GENIE3 VIM dump done (%.0fs)' % (time.time() - t0), flush=True)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,98 @@
+{
+  "BRCA": {
+    "gate \u03b1=0.5 (pub)": {
+      "edges": 31,
+      "string_pct": 32.3,
+      "control": 35.5
+    },
+    "gate \u03b1=0.5 (perm)": {
+      "edges": 31,
+      "string_pct": 32.3,
+      "control": 35.5
+    },
+    "gate \u03b1=50 (pub)": {
+      "edges": 27,
+      "string_pct": 40.7,
+      "control": 37.0
+    },
+    "gate \u03b1=50 (perm)": {
+      "edges": 32,
+      "string_pct": 34.4,
+      "control": 34.4
+    },
+    "gate \u03b1=100 (pub)": {
+      "edges": 21,
+      "string_pct": 47.6,
+      "control": 38.1
+    },
+    "gate \u03b1=100 (perm)": {
+      "edges": 32,
+      "string_pct": 34.4,
+      "control": 34.4
+    }
+  },
+  "GBM": {
+    "gate \u03b1=0.5 (pub)": {
+      "edges": 56,
+      "string_pct": 25.0,
+      "control": 25.0
+    },
+    "gate \u03b1=0.5 (perm)": {
+      "edges": 55,
+      "string_pct": 25.5,
+      "control": 25.5
+    },
+    "gate \u03b1=50 (pub)": {
+      "edges": 54,
+      "string_pct": 25.9,
+      "control": 25.9
+    },
+    "gate \u03b1=50 (perm)": {
+      "edges": 60,
+      "string_pct": 23.3,
+      "control": 25.0
+    },
+    "gate \u03b1=100 (pub)": {
+      "edges": 59,
+      "string_pct": 23.7,
+      "control": 25.4
+    },
+    "gate \u03b1=100 (perm)": {
+      "edges": 64,
+      "string_pct": 26.6,
+      "control": 25.0
+    }
+  },
+  "LUAD": {
+    "gate \u03b1=0.5 (pub)": {
+      "edges": 41,
+      "string_pct": 34.1,
+      "control": 34.1
+    },
+    "gate \u03b1=0.5 (perm)": {
+      "edges": 42,
+      "string_pct": 33.3,
+      "control": 33.3
+    },
+    "gate \u03b1=50 (pub)": {
+      "edges": 37,
+      "string_pct": 32.4,
+      "control": 37.8
+    },
+    "gate \u03b1=50 (perm)": {
+      "edges": 44,
+      "string_pct": 31.8,
+      "control": 31.8
+    },
+    "gate \u03b1=100 (pub)": {
+      "edges": 36,
+      "string_pct": 33.3,
+      "control": 38.9
+    },
+    "gate \u03b1=100 (perm)": {
+      "edges": 43,
+      "string_pct": 32.6,
+      "control": 32.6
+    }
+  }
+}

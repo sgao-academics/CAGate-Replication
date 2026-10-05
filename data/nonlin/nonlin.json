@@ -1,0 +1,340 @@
+{
+ "summary": {
+  "linear": {
+   "genie3": {
+    "aupr": 0.3959,
+    "prec_at_k": 0.5526,
+    "f1": 0.0,
+    "edges": 0.0
+   },
+   "gate": {
+    "aupr": 0.7144,
+    "prec_at_k": 0.9176,
+    "f1": 0.6345,
+    "edges": 60.3
+   },
+   "base": {
+    "aupr": 0.7486,
+    "prec_at_k": 0.8861,
+    "f1": 0.6737,
+    "edges": 71.0
+   },
+   "notears": {
+    "aupr": 0.6944,
+    "prec_at_k": 0.8975,
+    "f1": 0.6762,
+    "edges": 71.3
+   },
+   "gate_vs_base_aupr": -0.0342,
+   "gate_vs_genie3_aupr": 0.3185,
+   "n_units": 3
+  },
+  "nonlinear": {
+   "genie3": {
+    "aupr": 0.5877,
+    "prec_at_k": 0.7123,
+    "f1": 0.0,
+    "edges": 0.0
+   },
+   "gate": {
+    "aupr": 0.6038,
+    "prec_at_k": 0.8477,
+    "f1": 0.5331,
+    "edges": 52.3
+   },
+   "base": {
+    "aupr": 0.609,
+    "prec_at_k": 0.8793,
+    "f1": 0.5617,
+    "edges": 56.7
+   },
+   "notears": {
+    "aupr": 0.5741,
+    "prec_at_k": 0.8669,
+    "f1": 0.5606,
+    "edges": 57.0
+   },
+   "gate_vs_base_aupr": -0.0052,
+   "gate_vs_genie3_aupr": 0.0161,
+   "n_units": 3
+  }
+ },
+ "units": [
+  {
+   "d": 40,
+   "nc": 5,
+   "sp": 100,
+   "m": 3,
+   "seed": 0,
+   "nonlinear": false,
+   "n": 500,
+   "true_edges": 114,
+   "max_outdeg": 23,
+   "mean_outdeg": 2.85,
+   "n_regulators_carrying_half": 3,
+   "col_std_min": 1.4865645996828867,
+   "col_std_max": 3.0399954318208655,
+   "gate_edges": 64,
+   "h": {
+    "gate": 4.8231214577754145e-09,
+    "base": 3.2723477261242806e-09,
+    "notears": 0.0
+   },
+   "genie3_secs": 27.9,
+   "genie3": {
+    "aupr": 0.3864,
+    "f1": 0.0,
+    "prec_at_k": 0.5469,
+    "edges": 0
+   },
+   "gate": {
+    "aupr": 0.7437,
+    "f1": 0.6517,
+    "prec_at_k": 0.9062,
+    "edges": 64
+   },
+   "base": {
+    "aupr": 0.6981,
+    "f1": 0.6448,
+    "prec_at_k": 0.8594,
+    "edges": 69
+   },
+   "notears": {
+    "aupr": 0.6485,
+    "f1": 0.6339,
+    "prec_at_k": 0.8594,
+    "edges": 69
+   }
+  },
+  {
+   "d": 40,
+   "nc": 5,
+   "sp": 100,
+   "m": 3,
+   "seed": 1,
+   "nonlinear": false,
+   "n": 500,
+   "true_edges": 114,
+   "max_outdeg": 27,
+   "mean_outdeg": 2.85,
+   "n_regulators_carrying_half": 3,
+   "col_std_min": 1.618059257419649,
+   "col_std_max": 3.2009838613371566,
+   "gate_edges": 61,
+   "h": {
+    "gate": 4.959296973083838e-09,
+    "base": 6.335334035156848e-09,
+    "notears": 0.0
+   },
+   "genie3_secs": 28.3,
+   "genie3": {
+    "aupr": 0.417,
+    "f1": 0.0,
+    "prec_at_k": 0.5574,
+    "edges": 0
+   },
+   "gate": {
+    "aupr": 0.7097,
+    "f1": 0.64,
+    "prec_at_k": 0.918,
+    "edges": 61
+   },
+   "base": {
+    "aupr": 0.7179,
+    "f1": 0.6452,
+    "prec_at_k": 0.8525,
+    "edges": 72
+   },
+   "notears": {
+    "aupr": 0.6837,
+    "f1": 0.6596,
+    "prec_at_k": 0.8689,
+    "edges": 74
+   }
+  },
+  {
+   "d": 40,
+   "nc": 5,
+   "sp": 100,
+   "m": 3,
+   "seed": 2,
+   "nonlinear": false,
+   "n": 500,
+   "true_edges": 114,
+   "max_outdeg": 21,
+   "mean_outdeg": 2.85,
+   "n_regulators_carrying_half": 3,
+   "col_std_min": 1.5373600105915912,
+   "col_std_max": 3.0418416608517376,
+   "gate_edges": 56,
+   "h": {
+    "gate": 8.285027774945775e-09,
+    "base": 3.318106678307231e-09,
+    "notears": 0.0
+   },
+   "genie3_secs": 27.5,
+   "genie3": {
+    "aupr": 0.3843,
+    "f1": 0.0,
+    "prec_at_k": 0.5536,
+    "edges": 0
+   },
+   "gate": {
+    "aupr": 0.6899,
+    "f1": 0.6118,
+    "prec_at_k": 0.9286,
+    "edges": 56
+   },
+   "base": {
+    "aupr": 0.8298,
+    "f1": 0.7312,
+    "prec_at_k": 0.9464,
+    "edges": 72
+   },
+   "notears": {
+    "aupr": 0.7511,
+    "f1": 0.7351,
+    "prec_at_k": 0.9643,
+    "edges": 71
+   }
+  },
+  {
+   "d": 40,
+   "nc": 5,
+   "sp": 100,
+   "m": 3,
+   "seed": 0,
+   "nonlinear": true,
+   "n": 500,
+   "true_edges": 114,
+   "max_outdeg": 27,
+   "mean_outdeg": 2.85,
+   "n_regulators_carrying_half": 3,
+   "col_std_min": 1.456391406962077,
+   "col_std_max": 2.8543157540596047,
+   "gate_edges": 53,
+   "h": {
+    "gate": 6.0004552437931125e-09,
+    "base": 6.903860594320577e-09,
+    "notears": 0.0
+   },
+   "genie3_secs": 38.0,
+   "genie3": {
+    "aupr": 0.5735,
+    "f1": 0.0,
+    "prec_at_k": 0.6792,
+    "edges": 0
+   },
+   "gate": {
+    "aupr": 0.5643,
+    "f1": 0.515,
+    "prec_at_k": 0.8113,
+    "edges": 53
+   },
+   "base": {
+    "aupr": 0.6622,
+    "f1": 0.6136,
+    "prec_at_k": 0.9245,
+    "edges": 62
+   },
+   "notears": {
+    "aupr": 0.629,
+    "f1": 0.6136,
+    "prec_at_k": 0.9245,
+    "edges": 62
+   }
+  },
+  {
+   "d": 40,
+   "nc": 5,
+   "sp": 100,
+   "m": 3,
+   "seed": 1,
+   "nonlinear": true,
+   "n": 500,
+   "true_edges": 114,
+   "max_outdeg": 22,
+   "mean_outdeg": 2.85,
+   "n_regulators_carrying_half": 3,
+   "col_std_min": 1.636829687874327,
+   "col_std_max": 2.6292644856598906,
+   "gate_edges": 50,
+   "h": {
+    "gate": 4.811894882550405e-09,
+    "base": 6.883318803829752e-09,
+    "notears": 0.0
+   },
+   "genie3_secs": 29.7,
+   "genie3": {
+    "aupr": 0.5658,
+    "f1": 0.0,
+    "prec_at_k": 0.68,
+    "edges": 0
+   },
+   "gate": {
+    "aupr": 0.6363,
+    "f1": 0.5366,
+    "prec_at_k": 0.88,
+    "edges": 50
+   },
+   "base": {
+    "aupr": 0.5706,
+    "f1": 0.5389,
+    "prec_at_k": 0.88,
+    "edges": 53
+   },
+   "notears": {
+    "aupr": 0.5832,
+    "f1": 0.5562,
+    "prec_at_k": 0.88,
+    "edges": 55
+   }
+  },
+  {
+   "d": 40,
+   "nc": 5,
+   "sp": 100,
+   "m": 3,
+   "seed": 2,
+   "nonlinear": true,
+   "n": 500,
+   "true_edges": 114,
+   "max_outdeg": 24,
+   "mean_outdeg": 2.85,
+   "n_regulators_carrying_half": 4,
+   "col_std_min": 1.507297734847979,
+   "col_std_max": 2.5841384975142097,
+   "gate_edges": 54,
+   "h": {
+    "gate": 7.0493015869033115e-09,
+    "base": 5.0073651891580084e-09,
+    "notears": 0.0
+   },
+   "genie3_secs": 30.8,
+   "genie3": {
+    "aupr": 0.6239,
+    "f1": 0.0,
+    "prec_at_k": 0.7778,
+    "edges": 0
+   },
+   "gate": {
+    "aupr": 0.6109,
+    "f1": 0.5476,
+    "prec_at_k": 0.8519,
+    "edges": 54
+   },
+   "base": {
+    "aupr": 0.5942,
+    "f1": 0.5325,
+    "prec_at_k": 0.8333,
+    "edges": 55
+   },
+   "notears": {
+    "aupr": 0.5102,
+    "f1": 0.5119,
+    "prec_at_k": 0.7963,
+    "edges": 54
+   }
+  }
+ ]
+}

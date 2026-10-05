@@ -1,0 +1,382 @@
+{
+  "ACC": {
+    "status": "ok(105 KB)",
+    "n_samples": 92,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_ACC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "BLCA": {
+    "status": "ok(474 KB)",
+    "n_samples": 436,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_BLCA",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_BLCA",
+      "_PANCAN_mutation_PANCAN",
+      "diagnosis_subtype",
+      "_GENOMIC_ID_TCGA_BLCA_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "BRCA": {
+    "status": "ok(1658 KB)",
+    "n_samples": 1247,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "CN_Clusters_nature2012",
+      "Integrated_Clusters_no_exp__nature2012",
+      "Integrated_Clusters_unsup_exp__nature2012",
+      "Integrated_Clusters_with_PAM50__nature2012",
+      "PAM50Call_RNAseq",
+      "PAM50_mRNA_nature2012",
+      "RPPA_Clusters_nature2012",
+      "SigClust_Intrinsic_mRNA_nature2012",
+      "SigClust_Unsupervised_mRNA_nature2012",
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_BRCA",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_BRCA",
+      "_PANCAN_mutation_PANCAN",
+      "methylation_Clusters_nature2012",
+      "miRNA_Clusters_nature2012",
+      "_GENOMIC_ID_TCGA_BRCA_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "CESC": {
+    "status": "ok(372 KB)",
+    "n_samples": 313,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_CESC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "CHOL": {
+    "status": "ok(46 KB)",
+    "n_samples": 45,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_CHOL_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "COAD": {
+    "status": "ok(593 KB)",
+    "n_samples": 736,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_COADREAD",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_COADREAD_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "DLBC": {
+    "status": "ok(64 KB)",
+    "n_samples": 48,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_DLBC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "ESCA": {
+    "status": "ok(221 KB)",
+    "n_samples": 204,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_ESCA_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "GBM": {
+    "status": "ok(595 KB)",
+    "n_samples": 629,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "GeneExp_Subtype",
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_GBM",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_GBM_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "HNSC": {
+    "status": "ok(668 KB)",
+    "n_samples": 604,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_HNSC",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_HNSC",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_HNSC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "KICH": {
+    "status": "ok(77 KB)",
+    "n_samples": 91,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_KICH_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "KIRC": {
+    "status": "ok(765 KB)",
+    "n_samples": 945,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_KIRC",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_KIRC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "KIRP": {
+    "status": "ok(330 KB)",
+    "n_samples": 352,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_KIRP_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "LAML": {
+    "status": "ok(246 KB)",
+    "n_samples": 200,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_LAML",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_LAML",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_LAML_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "LGG": {
+    "status": "ok(550 KB)",
+    "n_samples": 530,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_LGG_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "LIHC": {
+    "status": "ok(409 KB)",
+    "n_samples": 438,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_LIHC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "LUAD": {
+    "status": "ok(693 KB)",
+    "n_samples": 706,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "Expression_Subtype",
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_LUAD",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_LUAD",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_LUAD_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "LUSC": {
+    "status": "ok(590 KB)",
+    "n_samples": 626,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_LUSC",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_LUSC",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_LUSC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "MESO": {
+    "status": "ok(79 KB)",
+    "n_samples": 87,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_MESO_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "OV": {
+    "status": "ok(574 KB)",
+    "n_samples": 630,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_OV",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_OV_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "PAAD": {
+    "status": "ok(210 KB)",
+    "n_samples": 196,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_PAAD_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "PCPG": {
+    "status": "ok(163 KB)",
+    "n_samples": 187,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_PCPG_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "PRAD": {
+    "status": "ok(550 KB)",
+    "n_samples": 566,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_PRAD_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "READ": {
+    "status": "cached",
+    "n_samples": 736,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_COADREAD",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_COADREAD_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "SARC": {
+    "status": "ok(257 KB)",
+    "n_samples": 271,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "leiomyosarcoma_histologic_subtype",
+      "_GENOMIC_ID_TCGA_SARC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "SKCM": {
+    "status": "ok(384 KB)",
+    "n_samples": 481,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_SKCM_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "STAD": {
+    "status": "ok(512 KB)",
+    "n_samples": 580,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_STAD_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "TGCT": {
+    "status": "ok(186 KB)",
+    "n_samples": 156,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_TGCT_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "THCA": {
+    "status": "ok(581 KB)",
+    "n_samples": 580,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_THCA_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "THYM": {
+    "status": "ok(104 KB)",
+    "n_samples": 126,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_THYM_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "UCEC": {
+    "status": "ok(662 KB)",
+    "n_samples": 596,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_PANCAN_CNA_PANCAN_K8",
+      "_PANCAN_Cluster_Cluster_PANCAN",
+      "_PANCAN_DNAMethyl_PANCAN",
+      "_PANCAN_DNAMethyl_UCEC",
+      "_PANCAN_RPPA_PANCAN_K8",
+      "_PANCAN_UNC_RNAseq_PANCAN_K16",
+      "_PANCAN_miRNA_PANCAN",
+      "_PANCAN_mirna_UCEC",
+      "_PANCAN_mutation_PANCAN",
+      "_GENOMIC_ID_TCGA_UCEC_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "UCS": {
+    "status": "ok(64 KB)",
+    "n_samples": 57,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_UCS_exp_HiSeqV2_PANCAN"
+    ]
+  },
+  "UVM": {
+    "status": "ok(79 KB)",
+    "n_samples": 80,
+    "sample_col": "sampleID",
+    "subtype_cols": [
+      "_GENOMIC_ID_TCGA_UVM_exp_HiSeqV2_PANCAN"
+    ]
+  }
+}

@@ -5,7 +5,7 @@ Reviewer point R1.3 asks for the support rate at combined scores >=400, >=700 an
 >=900, not >=700 alone.  This job rebuilds all three STRING pools in a single pass
 (so the 154 MB PPI file is parsed once), then recomputes, per cancer and per arm,
 the fraction of each arm's top-k edges that appear in the pool, k = the gate's own
-edge count (same convention as Job B and the manuscript).
+edge count (the convention used in the manuscript).
 
 Arms: gate / base / notears (from mega33_w/*.npz) and GENIE3 (from
 b3_genie3/vim/*.npz, author's official RF implementation, ntrees=1000).

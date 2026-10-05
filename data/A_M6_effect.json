@@ -1,0 +1,197 @@
+{
+ "n": 33,
+ "arms": {
+  "notears": {
+   "edges": 63.666666666666664,
+   "rate": 25.421212121212122,
+   "supported": 16.09160606060606
+  },
+  "base": {
+   "edges": 60.63636363636363,
+   "rate": 26.293939393939393,
+   "supported": 15.85251515151515
+  },
+  "gate": {
+   "edges": 50.303030303030305,
+   "rate": 29.851515151515148,
+   "supported": 14.787818181818182
+  }
+ },
+ "gate_vs_notears_supported": {
+  "mean": -1.3037878787878794,
+  "median": -0.9979999999999993,
+  "p": 0.0011104201221135807,
+  "n_win": 8
+ },
+ "gate_vs_base_supported": {
+  "mean": -1.06469696969697,
+  "median": -0.9759999999999991
+ },
+ "per_cancer": [
+  {
+   "cancer": "BRCA",
+   "gate": 11.01,
+   "notears": 12.01
+  },
+  {
+   "cancer": "KIRC",
+   "gate": 17.0,
+   "notears": 16.02
+  },
+  {
+   "cancer": "LUAD",
+   "gate": 15.01,
+   "notears": 15.0
+  },
+  {
+   "cancer": "THCA",
+   "gate": 8.0,
+   "notears": 8.0
+  },
+  {
+   "cancer": "HNSC",
+   "gate": 25.99,
+   "notears": 28.0
+  },
+  {
+   "cancer": "LUSC",
+   "gate": 27.0,
+   "notears": 28.97
+  },
+  {
+   "cancer": "PRAD",
+   "gate": 14.0,
+   "notears": 14.99
+  },
+  {
+   "cancer": "LGG",
+   "gate": 12.03,
+   "notears": 11.99
+  },
+  {
+   "cancer": "SKCM",
+   "gate": 23.0,
+   "notears": 26.02
+  },
+  {
+   "cancer": "STAD",
+   "gate": 23.0,
+   "notears": 23.98
+  },
+  {
+   "cancer": "BLCA",
+   "gate": 19.99,
+   "notears": 23.98
+  },
+  {
+   "cancer": "LIHC",
+   "gate": 14.0,
+   "notears": 16.01
+  },
+  {
+   "cancer": "COAD",
+   "gate": 17.98,
+   "notears": 20.98
+  },
+  {
+   "cancer": "KIRP",
+   "gate": 12.0,
+   "notears": 12.99
+  },
+  {
+   "cancer": "CESC",
+   "gate": 19.0,
+   "notears": 19.99
+  },
+  {
+   "cancer": "OV",
+   "gate": 3.0,
+   "notears": 3.0
+  },
+  {
+   "cancer": "SARC",
+   "gate": 17.01,
+   "notears": 16.02
+  },
+  {
+   "cancer": "UCEC",
+   "gate": 3.0,
+   "notears": 3.02
+  },
+  {
+   "cancer": "ESCA",
+   "gate": 24.98,
+   "notears": 22.0
+  },
+  {
+   "cancer": "PCPG",
+   "gate": 9.98,
+   "notears": 11.02
+  },
+  {
+   "cancer": "PAAD",
+   "gate": 22.98,
+   "notears": 27.97
+  },
+  {
+   "cancer": "LAML",
+   "gate": 19.99,
+   "notears": 23.01
+  },
+  {
+   "cancer": "GBM",
+   "gate": 12.98,
+   "notears": 17.02
+  },
+  {
+   "cancer": "TGCT",
+   "gate": 12.0,
+   "notears": 15.98
+  },
+  {
+   "cancer": "THYM",
+   "gate": 11.01,
+   "notears": 9.98
+  },
+  {
+   "cancer": "READ",
+   "gate": 15.01,
+   "notears": 18.97
+  },
+  {
+   "cancer": "KICH",
+   "gate": 12.03,
+   "notears": 13.98
+  },
+  {
+   "cancer": "MESO",
+   "gate": 11.0,
+   "notears": 16.02
+  },
+  {
+   "cancer": "UVM",
+   "gate": 9.01,
+   "notears": 10.03
+  },
+  {
+   "cancer": "ACC",
+   "gate": 6.02,
+   "notears": 5.99
+  },
+  {
+   "cancer": "UCS",
+   "gate": 11.0,
+   "notears": 11.03
+  },
+  {
+   "cancer": "DLBC",
+   "gate": 12.0,
+   "notears": 10.03
+  },
+  {
+   "cancer": "CHOL",
+   "gate": 16.0,
+   "notears": 17.02
+  }
+ ]
+}
