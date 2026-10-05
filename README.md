@@ -1,11 +1,11 @@
-# CAGate: Cluster-Aware Gating and Cross-Cancer Consensus Improve the Precision of Causal Discovery in Heterogeneous Cancer Transcriptomes
+# CAGate: Cluster-Aware Gating and Cross-Cancer Consensus for Causal Discovery in Heterogeneous Cancer Transcriptomes
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
 [![Preprint](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.7164939-orange)](https://doi.org/10.2139/ssrn.7164939)
 
 Replication package for *CAGate: Cluster-Aware Gating and Cross-Cancer Consensus
-Causal Discovery in Heterogeneous Cancer Transcriptomes* — Shuaidong Gao
+for Causal Discovery in Heterogeneous Cancer Transcriptomes* — Shuaidong Gao
 (Chongqing Institute of Foreign Studies).
 
 CAGate adds a **cluster-aware gate** to NOTEARS-style differentiable causal
@@ -112,8 +112,9 @@ All comparisons in this package use a NOTEARS solver run to convergence.
 | `string_threshold/*.json` | Supplementary Note SN23 — external support at combined score ≥ 400 / 700 / 900 |
 | `mega33_w/*` | The three arms' weight matrices — the common input of SN22–SN25 |
 | `A_M4_phys.json` | Supplementary Note SN24 — external support on the STRING physical channels only |
+| `A_M4b_phys_cm.json` | Supplementary Note SN24 — the physical-channel control at a matched edge count |
 | `A_M3_axes.json`, `A_M3_axes2.json`, `B_hi_edges_*.json`, `edges_d300.json` | Supplementary Note SN20 — the two-axis split of the consensus edge set |
-| `A_M1_subtype.json`, `subtype_final.json`, `subtype_eval.json`, `subtype_eval_alpha.json`, `subtypes_run/*` | Supplementary Note SN25 — the published-subtype-label control |
+| `A_M1_subtype.json`, `A_M1_subtype_ext.json`, `subtype_final.json`, `subtype_eval.json`, `subtype_eval_alpha.json`, `subtypes_run/*` | Supplementary Note SN25 — the published-subtype-label control |
 | `subtypes/{BRCA,GBM,LUAD}_clinical.tsv` | the published subtype calls used by note SN25, exported from cBioPortal (PanCancer Atlas) |
 | `A_M6_effect.json`, `table_s5.json` | Supplementary Note SN26 — the effect-size accounting, and Table S5 in machine-readable form |
 | `nonlin/*.json` | The hub-dominated synthetic benchmark (`scripts/_A_M5_nonlin.py`) |
@@ -129,8 +130,8 @@ seeds.
 | SN21 — dispersion versus structure | `scripts/_A_M1_hetero.py`, `scripts/_A_M1b_gate_scale.py` | this package alone (synthetic) |
 | SN22 — published baseline (GENIE3) | `scripts/_b3_genie3.py`, `scripts/_b3_genie3_vim.py`, `scripts/_b3_hubnull.py` | `data/mega33_w/` plus the STRING v12 raw files |
 | SN23 — STRING threshold sweep | `scripts/_b3_stringthr.py` | `data/mega33_w/`, `data/genie3/vim/` plus the STRING v12 raw files |
-| SN24 — physical-evidence control | `scripts/_A_M4_phys.py` | `data/mega33_w/` plus the STRING v12 raw files |
-| SN25 — published-subtype-label control | `scripts/_A_M1b_published_label_gate.py`, `scripts/_A_M1c_published_label_diagnosis.py`, `scripts/_A_M1_subtype.py` | `data/subtypes_run/`, `data/subtypes/*_clinical.tsv` (shipped) plus the TCGA matrices |
+| SN24 — physical-evidence control | `scripts/_A_M4_phys.py`, `scripts/_A_M4b_phys_countmatched.py` | `data/mega33_w/` plus the STRING v12 raw files |
+| SN25 — published-subtype-label control | `scripts/_A_M1b_published_label_gate.py`, `scripts/_A_M1c_published_label_diagnosis.py`, `scripts/_A_M1_subtype.py`, `scripts/_A_M1d_subtype_extension.py` | `data/subtypes_run/`, `data/subtypes/*_clinical.tsv` (shipped) plus the TCGA matrices |
 | SN26 — effect size and multiplicity | `scripts/_A_M6_effect.py` | this package alone (`data/table_s5.json`) |
 | SN20 addition — two-axis split | `scripts/_A_M3_axes.py`, `scripts/_A_M3_axes2.py` | this package alone (GO files needed for the GO version) |
 | hub-dominated nonlinear benchmark | `scripts/_A_M5_nonlin.py` | this package alone (synthetic) |
@@ -168,7 +169,7 @@ sha256sum -c SHA256SUMS.txt
 
 ```bibtex
 @article{gao2026cagate,
-  title  = {CAGate: Cluster-Aware Gating and Cross-Cancer Consensus Improve the Precision of Causal Discovery in Heterogeneous Cancer Transcriptomes},
+  title  = {CAGate: Cluster-Aware Gating and Cross-Cancer Consensus for Causal Discovery in Heterogeneous Cancer Transcriptomes},
   author = {Gao, Shuaidong},
   year   = {2026},
   doi    = {10.2139/ssrn.7164939}
