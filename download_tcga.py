@@ -167,12 +167,9 @@ def build_tf_prior(
     Build TF→target gene prior matrix.
 
     Methods:
-    - 'correlation': Use high absolute correlation as prior (cheap proxy)
-    - 'regnetwork': Use RegNetwork database (requires download)
-    - 'encode': Use ENCODE ChIP-seq data (requires download)
-
-    For proof-of-concept, use correlation-based prior with noise.
-    In production, replace with ENCODE/JASPAR data.
+    - 'correlation': the permissive TF -> gene prior used by default
+    - 'regnetwork': a RegNetwork-based prior, which is not shipped with this
+      package (see the fallback in the body)
 
     Returns:
         prior_mask: (n_genes, n_genes) binary prior matrix
@@ -180,15 +177,12 @@ def build_tf_prior(
     n = len(gene_names)
 
     if method == 'correlation':
-        # This is a placeholder. In production, use real TF binding data.
-        # We return an identity-like sparse prior that marks known TF→target edges.
+        # A permissive prior: every listed TF is allowed to regulate every gene.
+        # It carries no binding evidence and is used only to constrain the search
+        # space when no curated TF-target database is supplied.
         prior_mask = np.zeros((n, n))
 
-        # For each TF, mark it as potential regulator of all genes
-        # (This is a weak prior, but better than nothing for constraining search)
         for tf_idx in tf_indices:
-            # In reality, each TF regulates a specific subset of genes
-            # We use all genes as potential targets (weak prior)
             prior_mask[tf_idx, :] = 1.0
 
         # Remove self-loops from prior
@@ -198,8 +192,8 @@ def build_tf_prior(
         return prior_mask
 
     elif method == 'regnetwork':
-        # TODO: Download and parse RegNetwork
-        print(f"  RegNetwork prior not yet implemented. Using correlation-based fallback.")
+        print("  RegNetwork priors are not part of this package; "
+              "using the permissive prior instead.")
         return build_tf_prior(gene_names, tf_indices, method='correlation')
 
     else:

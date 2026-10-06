@@ -3,11 +3,6 @@
   "status": "OK",
   "n": 201,
   "d": 100,
-  "legacy": {
-    "cagate_base_mean": 11.0,
-    "cagate_gate_mean": 186.0,
-    "cagate_delta": 175.0
-  },
   "base": {
     "edges": 49,
     "h": 8.120409233924875e-09,

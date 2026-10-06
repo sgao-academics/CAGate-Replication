@@ -109,8 +109,10 @@ def main(a, b):
 
     out = os.path.join(REPO, 'data')
     os.makedirs(out, exist_ok=True)
+    # Record the two input directories by their last path component only, so that
+    # no absolute path from the machine that ran the analysis is written to disk.
     json.dump(dict(ladder_published=la, ladder_second_seed=lb,
-                   overlap=ov, dirs=[a, b]),
+                   overlap=ov, dirs=[os.path.basename(os.path.normpath(p)) for p in (a, b)]),
               open(os.path.join(out, 'A_M1_seedstab.json'), 'w', encoding='utf-8'), indent=1)
     print('saved -> data/A_M1_seedstab.json')
 

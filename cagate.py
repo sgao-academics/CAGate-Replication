@@ -1,25 +1,22 @@
 """
 ═══════════════════════════════════════════════════════════════════════
-C-FIX: Corrected CAGate solver.
+CAGate solver: cluster-aware gated differentiable causal discovery.
 
-The published (B-blood) CAGate solver has TWO defects:
-  1. ORIENTATION: it uses sq = (X @ M.T)^2 with M = I - W, i.e. it fits
-     X ~ X W^T.  Under the NOTEARS data convention (X = X W_true + Z) this
-     returns the TRANSPOSE of the intended adjacency.
-  2. OPTIMIZER: single free matrix W + Adam(lr=2e-3), FIXED 30x200 steps,
-     no convergence guarantee.
+The estimator combines three ingredients:
 
-This module is the C-blood fix:
-  * correct orientation:  R = X - X W           (matches NOTEARS / A-blood)
-  * A-blood solver skeleton: doubled-variable L1 trick + L-BFGS-B +
-    augmented Lagrangian (rho <- 10 rho, rho_max = 1e16, h_tol = 1e-8)
-  * B-blood cluster gate mechanism, applied IRLS-style:
-    gates are recomputed from current residuals once per outer iteration,
-    then held fixed while the inner weighted least-squares subproblem is
-    solved exactly.
+  * the NOTEARS residual convention, R = X - X W, so that W is oriented as
+    in X = X W_true + Z; no transposition of the adjacency is involved.
+  * a doubled-variable L1 scheme solved by L-BFGS-B with an augmented
+    Lagrangian (rho <- 10 rho, rho_max = 1e16, h_tol = 1e-8), run to
+    convergence rather than for a fixed number of steps.
+  * the cluster-aware gate, applied IRLS-style: the gate weights are
+    recomputed from the current residuals once per outer iteration and then
+    held fixed while the inner weighted least-squares subproblem is solved
+    exactly.
 
-Edge COUNTS are invariant to transposition, but every orientation-sensitive
-quantity (TPR / SHD / in-out degree / parent->child) is fixed here.
+Edge counts are invariant to transposition, whereas orientation-sensitive
+quantities (TPR / SHD / in- and out-degree / parent->child) depend on the
+residual convention above.
 ═══════════════════════════════════════════════════════════════════════
 """
 import numpy as np
@@ -182,7 +179,7 @@ def gen_cluster(d=10, nc=5, sp=100, seed=0, transpose=False):
     """Clustered linear-SEM data.
 
     transpose=False  ->  X = X Wt + Z   (NOTEARS convention; W matches Wt)
-    transpose=True   ->  X = X Wt^T + Z (legacy B-blood convention)
+    transpose=True   ->  X = X Wt^T + Z (transposed convention)
     """
     rng = np.random.RandomState(seed)
     Wt = np.zeros((d, d))

@@ -45,8 +45,8 @@ Level 2 closes the gap left by level 1, which regenerates the figures but not th
 |:--|:--|
 | `run_all.py` | One-click regeneration of every figure (level 1 below) |
 | `run_fit.py` | Re-fits the three arms from the raw TCGA matrices and rewrites `data/pan_cancer/*.json` (level 2 below) |
-| `scripts/` | The drivers behind Supplementary Notes SN21–SN26 — structural heterogeneity versus dispersion, the published GENIE3 baseline with its degree-matched null, the STRING threshold sweep, the physical-channel control, the published-subtype-label control, the effect-size and multiplicity accounting, and the hub-dominated nonlinear benchmark — with their helper modules and the vendored GENIE3 implementation |
-| `cagate.py` | The CAGate solver: doubled-variable L-BFGS-B with an augmented Lagrangian and a residual-contrast cluster gate |
+| `scripts/` | The drivers behind Supplementary Notes SN21–SN28 — structural heterogeneity versus dispersion, the published GENIE3 baseline with its degree-matched null, the STRING threshold sweep, the physical-channel control, the published-subtype-label control, the effect-size and multiplicity accounting, the spread-calibrated synthetic gain, the subsample-seed robustness of the consensus ladder, and the hub-dominated nonlinear benchmark — with their helper modules and the vendored GENIE3 implementation |
+| `cagate.py` | The CAGate solver: doubled-variable L-BFGS-B with an augmented Lagrangian and a residual-contrast cluster gate. `scripts/_cfix_solver.py` is a byte-identical copy of this module, so that the note drivers can import the solver by a fixed name from inside `scripts/` |
 | `notears_linear.py`, `notears_utils.py` | The NOTEARS baseline, run to convergence, used throughout |
 | `_fig1_gen.py` | Figure 1 — mechanism: residual dispersion → gate → cluster weights |
 | `_fig2_gen.py` | Figure 2 — edge precision across 33 TCGA cancers |
@@ -113,7 +113,7 @@ All comparisons in this package use a NOTEARS solver run to convergence.
 | `mega33_w/*` | The three arms' weight matrices — the common input of SN22–SN25 |
 | `A_M4_phys.json` | Supplementary Note SN24 — external support on the STRING physical channels only |
 | `A_M4b_phys_cm.json` | Supplementary Note SN24 — the physical-channel control at a matched edge count |
-| `A_M3_axes.json`, `A_M3_axes2.json`, `B_hi_edges_*.json`, `edges_d300.json` | Supplementary Note SN20 — the two-axis split of the consensus edge set |
+| `A_M3_axes.json`, `A_M3_axes2.json`, `edges_{d300,np300}.json`, `B_hi_edges_{d300,np300}.json` | Supplementary Note SN20 — the two-axis split of the consensus edge set, on the KEGG panel and on the non-pathway panel (the `non-pathway-300` row of the external-support tables) |
 | `A_M1_subtype.json`, `A_M1_subtype_ext.json`, `subtype_final.json`, `subtype_eval.json`, `subtype_eval_alpha.json`, `subtypes_run/*` | Supplementary Note SN25 — the published-subtype-label control |
 | `subtypes/{BRCA,GBM,LUAD}_clinical.tsv` | the published subtype calls used by note SN25, exported from cBioPortal (PanCancer Atlas) |
 | `A_M6_effect.json`, `table_s5.json` | Supplementary Note SN26 — the effect-size accounting, and Table S5 in machine-readable form |
@@ -185,15 +185,9 @@ sha256sum -c SHA256SUMS.txt
 ## Preprint
 
 An earlier version is on SSRN ([10.2139/ssrn.7164939](https://doi.org/10.2139/ssrn.7164939)).
-It corresponds to a pre-submission draft; the present package is the version
-submitted to the *Journal of Bioinformatics and Computational Biology* and
-supersedes it. The signed-edge and cross-cancer-consensus analyses were added
-after the preprint.
-
-## Patent
-
-The CAGate method is the subject of patent application CNIPA 202611098494.0
-(filed 23 July 2026).
+It corresponds to an earlier draft; the present package accompanies the current
+manuscript and supersedes it. The signed-edge and cross-cancer-consensus
+analyses were added after the preprint.
 
 ## See also
 
@@ -205,9 +199,4 @@ differentiable causal-discovery methods and diagnostics.
 
 MIT — see [LICENSE](LICENSE).
 
-The code is released under the MIT Licence. The CAGate *method* is the subject of
-patent application CNIPA 202611098494.0 (and a corresponding US provisional
-application); the MIT grant covers the code as published and does not by itself
-grant a patent licence. Academic and other non-commercial research use of the
-method as described in the paper is permitted; commercial use of the patented
-method may require a separate licence.
+The code is released under the MIT Licence.

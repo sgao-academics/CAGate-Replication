@@ -96,7 +96,7 @@
   "consensus_jaccard": 0.8813559322033898
  },
  "dirs": [
-  "E:\\mag_cache\\jbcb\\c_fix\\real_inv_d300",
-  "E:\\mag_cache\\jbcb\\c_fix\\real_inv_d300_s1_314"
+  "real_inv_d300",
+  "real_inv_d300_s1_314"
  ]
 }
