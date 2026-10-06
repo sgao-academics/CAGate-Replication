@@ -60,6 +60,7 @@ Level 2 closes the gap left by level 1, which regenerates the figures but not th
 | `figstyle.py`, `palette.py` | Figure-style helpers (shared with the manuscript's other figures) |
 | `download_tcga.py` | TCGA RNA-Seq download (UCSC Xena) |
 | `data/` | Pre-computed results that every figure is drawn from |
+| `supplementary_tables/` | Machine-readable Excel workbooks — the printed Supplementary Tables S1–S6 and the quantities of Notes SN20, SN25 and SN26, one sheet per table, each workbook with a Notes sheet. These are the workbooks named in the *Data files* note of the Supplementary Material |
 | `environment.yml` | Conda specification of the experimental environment |
 | `SHA256SUMS.txt` | SHA-256 manifest of this package |
 
@@ -120,6 +121,7 @@ All comparisons in this package use a NOTEARS solver run to convergence.
 | `nonlin/*.json` | The hub-dominated synthetic benchmark (`scripts/_A_M5_nonlin.py`) |
 | `spread_calib/*.json` | Supplementary Note SN27 — the synthetic gain at each relative dispersion span |
 | `A_M1_seedstab.json` | Supplementary Note SN28 — the recurrence ladder under both subsample seeds, with the overlap statistics |
+| `../supplementary_tables/*.xlsx` | Machine-readable copies of Supplementary Tables S1–S6 and of the quantities of Notes SN20, SN25 and SN26; see `supplementary_tables/README.md` for the sheet-to-source map |
 
 TCGA RNA-Seq data are public and are not redistributed here;
 `download_tcga.py` fetches them from UCSC Xena. All experiments use fixed random
